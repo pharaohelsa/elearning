@@ -6,13 +6,13 @@ class Home extends CI_Controller {
 	public function LoadPage($value){
 		if(isset($value['Result'])){
 			$data = $value['Result'];
-			$this->load->view('template/header', $data);
+			$this->load->view('backend/template/header', $data);
 		}else{
-			$this->load->view('template/header');
+			$this->load->view('backend/template/header');
 		}
-		$this->load->view('template/navigator');
+		$this->load->view('backend/template/navigator');
     $this->load->view($value['View']);
-    $this->load->view('template/footer');
+    $this->load->view('backend/template/footer');
   }
 
 	public function index(){
@@ -26,15 +26,15 @@ class Home extends CI_Controller {
 	}
 
 	public function cultural(){
-		//$this->load->view('index');
-		$getCultural = $this->Culturalmodel->Cultural();
-		$value = array(
-			'Result' => array(
-				'getCultural' => $getCultural
-			),
-			'View' => 'cultural_list'
-		);
-		$this->LoadPage($value);
+		$this->load->view('backend/index');
+		// $getCultural = $this->Culturalmodel->Cultural();
+		// $value = array(
+		// 	'Result' => array(
+		// 		'getCultural' => $getCultural
+		// 	),
+		// 	'View' => 'backend/cultural_list'
+		// );
+		// $this->LoadPage($value);
 	}
 
 }
