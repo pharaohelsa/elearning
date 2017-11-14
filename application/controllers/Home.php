@@ -26,7 +26,8 @@ class Home extends CI_Controller {
 	}
 
 	public function cultural(){
-		$this->load->view('backend/index');
+		// $this->load->view('backend/index');
+		 $this->load->view('frontend/index');
 		// $getCultural = $this->Culturalmodel->Cultural();
 		// $value = array(
 		// 	'Result' => array(
@@ -35,6 +36,11 @@ class Home extends CI_Controller {
 		// 	'View' => 'backend/cultural_list'
 		// );
 		// $this->LoadPage($value);
+	}
+
+	public function backend(){
+
+		$this->load->view('backend/index');
 	}
 
 }
