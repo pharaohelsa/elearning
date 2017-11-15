@@ -19,7 +19,7 @@
 
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="http://getbootstrap.com/docs/4.0/examples/carousel/#">Carousel</a>
+        <a class="navbar-brand" href="http://getbootstrap.com/docs/4.0/examples/carousel/#">E-learning</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -32,10 +32,10 @@
               <a class="nav-link" href="http://getbootstrap.com/docs/4.0/examples/carousel/#">Link</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo site_url('home/backend'); ?>">Sign in</a>
+              <a class="nav-link disabled" href="http://getbootstrap.com/docs/4.0/examples/carousel/#">Disabled</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="http://getbootstrap.com/docs/4.0/examples/carousel/#">Disabled</a>
+              <a class="nav-link" href="<?php echo site_url('Home/login'); ?>">Sign in</a>
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">

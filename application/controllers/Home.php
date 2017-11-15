@@ -19,7 +19,7 @@ class Home extends CI_Controller {
 		// redirect('Home/productlist');
 		//$this->load->view('body');
 		if(!isset($_SESSION["ADMIN_ID"])){
-			$this->load->view('login');
+			$this->load->view('frontend/index');
 		}else{
 			redirect('Home/cultural');
 		}
@@ -27,7 +27,7 @@ class Home extends CI_Controller {
 
 	public function cultural(){
 		// $this->load->view('backend/index');
-		 $this->load->view('frontend/index');
+		 $this->load->view('backend/index');
 		// $getCultural = $this->Culturalmodel->Cultural();
 		// $value = array(
 		// 	'Result' => array(
@@ -36,6 +36,10 @@ class Home extends CI_Controller {
 		// 	'View' => 'backend/cultural_list'
 		// );
 		// $this->LoadPage($value);
+	}
+
+	public function login(){
+		$this->load->view('login');
 	}
 
 	public function backend(){
