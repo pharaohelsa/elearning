@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 06, 2017 at 08:43 AM
+-- Generation Time: Nov 16, 2017 at 09:12 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -28,10 +28,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tb_authen` (
   `tb_authen_ID` int(11) NOT NULL,
-  `tb_authen_usertype` int(1) NOT NULL COMMENT 'user 1=admin,2=user',
+  `tb_authen_usertype` char(1) NOT NULL COMMENT 'user 1=admin,2=teacher,3=student',
   `tb_authen_username` varchar(50) NOT NULL,
   `tb_authen_password` varchar(50) NOT NULL,
-  `tb_authen_fullname` varchar(200) NOT NULL,
+  `tb_authen_name` varchar(100) NOT NULL,
+  `tb_authen_lastname` varchar(100) NOT NULL,
+  `tb_authen_sex` char(1) NOT NULL COMMENT 'M=male,F=female',
+  `tb_authen_email` varchar(100) NOT NULL,
   `tb_authen_lastlogin` datetime NOT NULL,
   `tb_authen_createdate` datetime NOT NULL,
   `tb_authen_updatedate` datetime NOT NULL
@@ -41,8 +44,27 @@ CREATE TABLE `tb_authen` (
 -- Dumping data for table `tb_authen`
 --
 
-INSERT INTO `tb_authen` (`tb_authen_ID`, `tb_authen_usertype`, `tb_authen_username`, `tb_authen_password`, `tb_authen_fullname`, `tb_authen_lastlogin`, `tb_authen_createdate`, `tb_authen_updatedate`) VALUES
-(1, 1, 'test', 'test', 'nicholas flamel', '2017-11-06 00:00:00', '2017-11-06 00:00:00', '2017-11-06 00:00:00');
+INSERT INTO `tb_authen` (`tb_authen_ID`, `tb_authen_usertype`, `tb_authen_username`, `tb_authen_password`, `tb_authen_name`, `tb_authen_lastname`, `tb_authen_sex`, `tb_authen_email`, `tb_authen_lastlogin`, `tb_authen_createdate`, `tb_authen_updatedate`) VALUES
+(1, '1', 'test', 'test', 'nicholas flamel', '', '', '', '2017-11-06 00:00:00', '2017-11-06 00:00:00', '2017-11-06 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_course`
+--
+
+CREATE TABLE `tb_course` (
+  `tb_course_ID` int(11) NOT NULL,
+  `tb_course_name` varchar(100) NOT NULL,
+  `tb_course_description` text NOT NULL COMMENT 'คำอธิบายรายวิชา',
+  `tb_course_purpose` text NOT NULL COMMENT 'จุดประสงค์',
+  `tb_course_EnableStatus` char(1) NOT NULL COMMENT 'Y=yes,N=no',
+  `tb_course_DeleteStatus` char(1) NOT NULL COMMENT 'Y=yes,N=no',
+  `tb_course_Createdate` datetime NOT NULL,
+  `tb_course_CreateBy` varchar(100) NOT NULL,
+  `tb_course_UpdateDate` datetime NOT NULL,
+  `tb_course_UpdateBy` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Indexes for dumped tables
