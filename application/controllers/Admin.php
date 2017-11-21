@@ -12,7 +12,7 @@ class Admin extends CI_Controller {
 			redirect($this->agent->referrer(), 'refresh');
 		} else {
 			$_SESSION['ADMIN_ID'] = $User[0]['tb_authen_ID'];
-			$_SESSION['ADMIN_NAME'] = $User[0]['tb_authen_fullname'];
+			$_SESSION['ADMIN_NAME'] = $User[0]['tb_authen_name'] ." ". $User[0]['tb_authen_lastname'];
 			redirect('Home');
 		}
 	}

@@ -134,14 +134,14 @@
                     <li class="active"><a href="dashboard.html"><i class="fa fa-tachometer fa-fw">
                         <div class="icon-bg bg-orange"></div>
                     </i><span class="menu-title">Dashboard</span></a></li>
-                    <li><a href="Layout.html"><i class="fa fa-desktop fa-fw">
+                    <li><a href="#"><i class="fa fa-user fa-fw">
                         <div class="icon-bg bg-pink"></div>
-                    </i><span class="menu-title">Layouts</span></a>
+                    </i><span class="menu-title">สมาชิก</span></a>
 
                     </li>
-                    <li><a href="UIElements.html"><i class="fa fa-send-o fa-fw">
+                    <li><a href="#"><i class="fa fa-map-o fa-fw">
                         <div class="icon-bg bg-green"></div>
-                    </i><span class="menu-title">UI Elements</span></a>
+                    </i><span class="menu-title">บทเรียน</span></a>
 
                     </li>
                     <li><a href="Forms.html"><i class="fa fa-edit fa-fw">
