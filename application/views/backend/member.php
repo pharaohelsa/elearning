@@ -29,8 +29,8 @@
                         <tr>
                             <th>#</th>
                             <th>Username</th>
-                            <th>Age</th>
-                            <th>Status</th>
+                            <th>Fullname</th>
+                            <th>action</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -38,7 +38,9 @@
                             <td>1</td>
                             <td>Henry</td>
                             <td>23</td>
-                            <td><span class="label label-sm label-success">Approved</span></td>
+                            <td><span class="label label-sm label-success">Approved</span>
+                              <a href='<?php echo site_url('Home/memberadd'); ?>' class="btn btn-green navbar-btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;Add</a>
+                            </td>
                         </tr>
                         <tr>
                             <td>2</td>
