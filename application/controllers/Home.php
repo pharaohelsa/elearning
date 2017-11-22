@@ -27,15 +27,15 @@ class Home extends CI_Controller {
 
 	public function cultural(){
 		// $this->load->view('backend/index');
-		 $this->load->view('backend/index');
+		 //$this->load->view('backend/index');
 		// $getCultural = $this->Culturalmodel->Cultural();
-		// $value = array(
-		// 	'Result' => array(
-		// 		'getCultural' => $getCultural
-		// 	),
-		// 	'View' => 'backend/cultural_list'
-		// );
-		// $this->LoadPage($value);
+		$value = array(
+			// 'Result' => array(
+			// 	'getCultural' => $getCultural
+			// ),
+			'View' => 'backend/index'
+		);
+		$this->LoadPage($value);
 	}
 
 	public function login(){
@@ -45,6 +45,27 @@ class Home extends CI_Controller {
 	public function backend(){
 
 		$this->load->view('backend/index');
+	}
+
+	public function member(){
+		// $getCultural = $this->Culturalmodel->Cultural();
+		$value = array(
+			// 'Result' => array(
+			// 	'getCultural' => $getCultural
+			// ),
+			'View' => 'backend/member'
+		);
+		$this->LoadPage($value);
+	}
+
+	public function memberadd(){
+		$value = array(
+			// 'Result' => array(
+			// 	'getCultural' => $getCultural
+			// ),
+			'View' => 'backend/memberadd'
+		);
+		$this->LoadPage($value);
 	}
 
 

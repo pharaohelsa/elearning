@@ -34,11 +34,17 @@
             <li class="nav-item">
               <a class="nav-link" href="http://getbootstrap.com/docs/4.0/examples/carousel/#">แบบทดสอบหลังเรียน</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://getbootstrap.com/docs/4.0/examples/carousel/#">ลำดับคะแนน</a>
+            </li>
             <!-- <li class="nav-item">
               <a class="nav-link disabled" href="http://getbootstrap.com/docs/4.0/examples/carousel/#">Disabled</a>
             </li> -->
             <li class="nav-item">
               <a class="nav-link" href="<?php echo site_url('Home/login'); ?>">เข้าสู่ระบบ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo site_url('Home/memberadd'); ?>">สมัครสมาชิก</a>
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
