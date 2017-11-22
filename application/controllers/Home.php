@@ -48,11 +48,11 @@ class Home extends CI_Controller {
 	}
 
 	public function member(){
-		// $getCultural = $this->Culturalmodel->Cultural();
+		$getMember = $this->Culturalmodel->member();
 		$value = array(
-			// 'Result' => array(
-			// 	'getCultural' => $getCultural
-			// ),
+			'Result' => array(
+				'getMember' => $getMember
+			),
 			'View' => 'backend/member'
 		);
 		$this->LoadPage($value);

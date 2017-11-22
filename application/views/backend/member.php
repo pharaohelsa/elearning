@@ -20,8 +20,8 @@
         <div id="tab-general">
             <div class="panel panel-green">
                 <div class="panel-heading">Bordered Table</div>
-                <div id="bs-example-navbar-collapse-3" class="collapse navbar-collapse" style="float:right;">
-                    <button onclick="location.href='<?php echo site_url('Home/memberadd'); ?>'" type="button" class="btn btn-green navbar-btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;Add</button>
+                <div id="bs-example-navbar-collapse-3" class="collapse navbar-collapse" >
+                    <button onclick="location.href='<?php echo site_url('Home/memberadd'); ?>'" type="button" class="btn btn-green navbar-btn pull-right"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;Add</button>
                 </div>
                 <div class="panel-body">
                     <table class="table table-hover table-bordered">
@@ -34,32 +34,19 @@
                         </tr>
                         </thead>
                         <tbody>
+                          <?php foreach ($getMember as $ckey): ?>
                         <tr>
-                            <td>1</td>
-                            <td>Henry</td>
-                            <td>23</td>
-                            <td><span class="label label-sm label-success">Approved</span>
-                              <a href='<?php echo site_url('Home/memberadd'); ?>' class="btn btn-green navbar-btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;Add</a>
+                            <td><?php echo $ckey['tb_authen_ID'] ?></td>
+                            <td><?php echo $ckey['tb_authen_username'] ?></td>
+                            <td><?php echo $ckey['tb_authen_name']." ".$ckey['tb_authen_lastname'] ?></td>
+                            <td>
+                              <!-- <span class="label label-sm label-success">Approved</span> -->
+                              <!-- <a href='<?php echo site_url('Home/memberadd'); ?>' class="btn btn-green navbar-btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;Add</a> -->
+                              <a href="<?php echo site_url('Home/culturalEdit/'.$ckey['tb_authen_ID']); ?>" ><span class="label label-sm label-warning"><i class="fa fa-edit"></i>&nbsp;แก้ไข</span></a>
+                              <a href="JavaScript:if(confirm('ต้องการลบ') == true){window.location='<?php echo site_url('Cultural/CulturalDel/'.$ckey['tb_authen_ID']); ?>';}" ><span class="label label-sm label-danger"><i class="fa fa-trash-o"></i>&nbsp;ลบ</span></a>
                             </td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>John</td>
-                            <td>45</td>
-                            <td><span class="label label-sm label-info">Pending</span></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Larry</td>
-                            <td>30</td>
-                            <td><span class="label label-sm label-warning">Suspended</span></td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Lahm</td>
-                            <td>15</td>
-                            <td><span class="label label-sm label-danger">Blocked</span></td>
-                        </tr>
+                        <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>

@@ -23,23 +23,25 @@ class Admin extends CI_Controller {
 		redirect('Home');
 	}
 
-	public function adminInsert(){
+	public function memberInsert(){
 		$input = $this->input->post();
-		$this->Adminmodel->adminInsert($input);
-		redirect('Home/admin');
+		$this->Adminmodel->memberInsert($input);
+		redirect('Home/member');
 
 
 	}
-	public function adminEdit(){
-		$input = $this->input->post();
-		$this->Adminmodel->adminEdit($input);
-		redirect('Home/admin');
-	}
+	// public function adminEdit(){
+	// 	$input = $this->input->post();
+	// 	$this->Adminmodel->adminEdit($input);
+	// 	redirect('Home/admin');
+	// }
+  //
+	// public function adminDel(){
+	// 	$id = $this->uri->segment(3);
+	// 	$this->Adminmodel->adminDel($id);
+	// 	redirect('Home/admin');
+	// }
 
-	public function adminDel(){
-		$id = $this->uri->segment(3);
-		$this->Adminmodel->adminDel($id);
-		redirect('Home/admin');
-	}
+
 
 }

@@ -20,14 +20,16 @@
     <div class="page-content">
         <div id="tab-general">
           <div id="generalTabContent" class="tab-content">
-              <div id="tab-edit" class="tab-pane fade in active">
-                  <form action="#" class="form-horizontal"><h3>Account Setting</h3>
+              <div id="tab-edit" class="tab-pane fade in active form-horizontal">
+                  <!-- <form action="#" class="form-horizontal"> -->
+                    <?php echo form_open('Admin/memberInsert'); ?>
+                    <h3>Account Setting</h3>
 
                       <div class="form-group"><label class="col-sm-3 control-label">Email</label>
 
                           <div class="col-sm-9 controls">
                               <div class="row">
-                                  <div class="col-xs-9"><input type="email" placeholder="email@yourmail.com" class="form-control"/></div>
+                                  <div class="col-xs-9"><input type="email" placeholder="email@yourmail.com" class="form-control" name="tb_authen_email"/></div>
                               </div>
                           </div>
                       </div>
@@ -35,7 +37,7 @@
 
                           <div class="col-sm-9 controls">
                               <div class="row">
-                                  <div class="col-xs-9"><input type="text" placeholder="username" class="form-control"/></div>
+                                  <div class="col-xs-9"><input type="text" placeholder="username" class="form-control" name="tb_authen_username"/></div>
                               </div>
                           </div>
                       </div>
@@ -43,7 +45,7 @@
 
                           <div class="col-sm-9 controls">
                               <div class="row">
-                                  <div class="col-xs-4"><input type="password" placeholder="password" class="form-control"/></div>
+                                  <div class="col-xs-4"><input type="password" placeholder="password" class="form-control" namve="tb_authen_password"/></div>
                               </div>
                           </div>
                       </div>
@@ -59,7 +61,7 @@
 
                           <div class="col-sm-9 controls">
                               <div class="row">
-                                  <div class="col-xs-4"><select class="form-control">
+                                  <div class="col-xs-4"><select class="form-control" name="tb_authen_usertype">
                                       <option value="1">Admin</option>
                                       <option value="2">Teacher</option>
                                       <option value="3" selected>Student</option>
@@ -74,7 +76,7 @@
 
                           <div class="col-sm-9 controls">
                               <div class="row">
-                                  <div class="col-xs-9"><input type="text" placeholder="ชื่อ" class="form-control"/></div>
+                                  <div class="col-xs-9"><input type="text" placeholder="ชื่อ" class="form-control" name="tb_authen_name"/></div>
                               </div>
                           </div>
                       </div>
@@ -82,7 +84,7 @@
 
                           <div class="col-sm-9 controls">
                               <div class="row">
-                                  <div class="col-xs-9"><input type="text" placeholder="สกุล" class="form-control"/></div>
+                                  <div class="col-xs-9"><input type="text" placeholder="สกุล" class="form-control" name="tb_authen_lastname"/></div>
                               </div>
                           </div>
                       </div>
@@ -91,61 +93,20 @@
                           <div class="col-sm-9 controls">
                               <div class="row">
                                   <div class="col-xs-9">
-                                      <div class="radio"><label class="radio-inline"><input type="radio" value="0" name="gender" checked="checked"/>&nbsp;
-                                          ชาย</label><label class="radio-inline"><input type="radio" value="1" name="gender"/>&nbsp;
+                                      <div class="radio"><label class="radio-inline"><input type="radio" value="M" name="tb_authen_sex" checked="checked"/>&nbsp;
+                                          ชาย</label><label class="radio-inline"><input type="radio" value="F" name="tb_authen_sex"/>&nbsp;
                                           หญิง</label></div>
                                   </div>
                               </div>
                           </div>
                       </div>
 
-                      <!-- <div class="form-group"><label class="col-sm-3 control-label">วัน/เดือน/ปี(เกิด)</label>
 
-                          <div class="col-sm-9 controls">
-                              <div class="row">
-                                  <div class="col-xs-4"><input id="datepicker-normal" type="text" class="form-control"/></div>
-                              </div>
-                          </div>
-                      </div> -->
-
-
-                      <!-- <h3>Contact Setting</h3>
-
-                      <div class="form-group"><label class="col-sm-3 control-label">Mobile Phone</label>
-
-                          <div class="col-sm-9 controls">
-                              <div class="row">
-                                  <div class="col-xs-9"><input type="text" placeholder="mobile phone" class="form-control"/></div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="form-group"><label class="col-sm-3 control-label">Website</label>
-
-                          <div class="col-sm-9 controls">
-                              <div class="row">
-                                  <div class="col-xs-9"><input type="text" placeholder="website" class="form-control"/></div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="form-group"><label class="col-sm-3 control-label">Facebook</label>
-
-                          <div class="col-sm-9 controls">
-                              <div class="row">
-                                  <div class="col-xs-9"><input type="text" placeholder="facebook" class="form-control"/></div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="form-group"><label class="col-sm-3 control-label">Twitter</label>
-
-                          <div class="col-sm-9 controls">
-                              <div class="row">
-                                  <div class="col-xs-9"><input type="text" placeholder="twitter" class="form-control"/></div>
-                              </div>
-                          </div>
-                      </div> -->
                       <hr/>
+                      <!-- <input type="hidden" name="tb_admin_id" value="<?php echo $listAdminOne[0]['tb_authen_ID'] ?>"> -->
                       <button type="submit" class="btn btn-green btn-block">Finish</button>
-                  </form>
+                      <?php echo form_close(); ?>
+                  <!-- </form> -->
               </div>
 
           </div>

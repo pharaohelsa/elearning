@@ -14,6 +14,10 @@ class Adminmodel extends CI_Model
     ->result_array();
     return $query;
   }
+  public function memberInsert($input){
+    // var_dump($input);
+    $this->db->insert('tb_authen',$input);
+  }
 
 
 }
