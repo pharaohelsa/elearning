@@ -58,22 +58,22 @@
             </i><span class="menu-title">สมาชิก</span></a>
 
             </li>
-            <li><a href="#"><i class="fa fa-map-o fa-fw">
+            <li><a href="#"><i class="fa fa-file-archive-o fa-fw">
                 <div class="icon-bg bg-green"></div>
             </i><span class="menu-title">บทเรียน</span></a>
 
             </li>
-            <li><a href="Forms.html"><i class="fa fa-edit fa-fw">
+            <li><a href=""><i class="fa fa-edit fa-fw">
                 <div class="icon-bg bg-violet"></div>
-            </i><span class="menu-title">Forms</span></a>
+            </i><span class="menu-title">แบบทดสอบก่อนเรียน</span></a>
 
             </li>
             <li><a href="Tables.html"><i class="fa fa-th-list fa-fw">
                 <div class="icon-bg bg-blue"></div>
-            </i><span class="menu-title">Tables</span></a>
+            </i><span class="menu-title">แบบทดสอบหลังเรียน</span></a>
 
             </li>
-            <li><a href="DataGrid.html"><i class="fa fa-database fa-fw">
+            <!-- <li><a href="DataGrid.html"><i class="fa fa-database fa-fw">
                 <div class="icon-bg bg-red"></div>
             </i><span class="menu-title">Data Grids</span></a>
 
@@ -105,7 +105,7 @@
             </li>
             <li><a href="Animation.html"><i class="fa fa-slack fa-fw">
                 <div class="icon-bg bg-green"></div>
-            </i><span class="menu-title">Animations</span></a></li>
+            </i><span class="menu-title">Animations</span></a></li> -->
         </ul>
     </div>
 </nav>

@@ -7,8 +7,10 @@ class Home extends CI_Controller {
 		if(isset($value['Result'])){
 			$data = $value['Result'];
 			$this->load->view('backend/template/header', $data);
+			echo "data";
 		}else{
 			$this->load->view('backend/template/header');
+			echo "no data";
 		}
 		$this->load->view('backend/template/navigator');
     $this->load->view($value['View']);
@@ -61,7 +63,7 @@ class Home extends CI_Controller {
 	public function memberadd(){
 		$value = array(
 			// 'Result' => array(
-			// 	'getCultural' => $getCultural
+			// 	'memberOne' => ''
 			// ),
 			'View' => 'backend/memberadd'
 		);

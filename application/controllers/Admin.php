@@ -20,7 +20,7 @@ class Admin extends CI_Controller {
 	public function logout(){
 		unset($_SESSION['ADMIN_ID']);
 		unset($_SESSION['ADMIN_NAME']);
-		redirect('Home');
+		redirect('Frontpage');
 	}
 
 	public function memberInsert(){
