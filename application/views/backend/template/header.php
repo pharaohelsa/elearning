@@ -30,7 +30,6 @@
     <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/styles/jquery.news-ticker.css">
 </head>
 <body>
-    <div>
         <!--BEGIN THEME SETTING-->
         <!-- <div id="theme-setting">
             <a href="#" data-toggle="dropdown" data-step="1" data-intro="&lt;b&gt;Many styles&lt;/b&gt; and &lt;b&gt;colors&lt;/b&gt; be created for you. Let choose one and enjoy it!"

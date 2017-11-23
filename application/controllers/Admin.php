@@ -25,7 +25,18 @@ class Admin extends CI_Controller {
 
 	public function memberInsert(){
 		$input = $this->input->post();
-		$this->Adminmodel->memberInsert($input);
+		var_dump($input);
+		if(!empty($input['tb_authen_ID']))
+		{ //edit
+			//$this->Adminmodel->memberInsert($input);
+			echo "edit".$input['tb_authen_ID'];
+			var_dump($input['tb_authen_ID']);
+		}else{
+			//$this->Adminmodel->memberInsert($input);
+			echo "add".$input['tb_authen_ID'];
+			var_dump($input['tb_authen_ID']);
+		}
+		exit();
 		redirect('Home/member');
 
 

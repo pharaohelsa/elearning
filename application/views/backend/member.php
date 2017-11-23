@@ -19,9 +19,9 @@
     <div class="page-content">
         <div id="tab-general">
             <div class="panel panel-green">
-                <div class="panel-heading">Bordered Table</div>
+                <div class="panel-heading">จัดการข้อมูลสมาชิก</div>
                 <div id="bs-example-navbar-collapse-3" class="collapse navbar-collapse" >
-                    <button onclick="location.href='<?php echo site_url('Home/memberadd'); ?>'" type="button" class="btn btn-green navbar-btn pull-right"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;Add</button>
+                    <button onclick="location.href='<?php echo site_url('Home/memberadd'); ?>'" type="button" class="btn btn-green navbar-btn pull-right"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;เพิ่มสมาชิก</button>
                 </div>
                 <div class="panel-body">
                     <table class="table table-hover table-bordered">
@@ -42,7 +42,7 @@
                             <td>
                               <!-- <span class="label label-sm label-success">Approved</span> -->
                               <!-- <a href='<?php echo site_url('Home/memberadd'); ?>' class="btn btn-green navbar-btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;Add</a> -->
-                              <a href="<?php echo site_url('Home/culturalEdit/'.$ckey['tb_authen_ID']); ?>" ><span class="label label-sm label-warning"><i class="fa fa-edit"></i>&nbsp;แก้ไข</span></a>
+                              <a href="<?php echo site_url('Home/memberedit/'.$ckey['tb_authen_ID']); ?>" ><span class="label label-sm label-warning"><i class="fa fa-edit"></i>&nbsp;แก้ไข</span></a>
                               <a href="JavaScript:if(confirm('ต้องการลบ') == true){window.location='<?php echo site_url('Cultural/CulturalDel/'.$ckey['tb_authen_ID']); ?>';}" ><span class="label label-sm label-danger"><i class="fa fa-trash-o"></i>&nbsp;ลบ</span></a>
                             </td>
                         </tr>

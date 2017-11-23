@@ -24,6 +24,14 @@ class Culturalmodel extends CI_Model
     ->result_array();
   }
 
+  public function memberSelectOne($id){
+    return $this->db
+    ->where('tb_authen_ID',$id)
+    //->join('tb_cultype','tb_cultype.tb_cultype_id = tb_cultural.tb_cultype_id')
+    ->get('tb_authen')
+    ->result_array();
+  }
+
 
 
 }

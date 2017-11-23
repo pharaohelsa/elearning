@@ -68,5 +68,17 @@ class Home extends CI_Controller {
 		$this->LoadPage($value);
 	}
 
+	public function memberedit(){
+		$id = $this->uri->segment(3);
+		$memberOne = $this->Culturalmodel->memberSelectOne($id);
+		$value = array(
+			'Result' => array(
+				'memberOne' => $memberOne
+			),
+			'View' => 'backend/memberadd'
+		);
+		$this->LoadPage($value);
+	}
+
 
 }
