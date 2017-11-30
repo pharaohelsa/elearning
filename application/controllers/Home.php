@@ -7,10 +7,10 @@ class Home extends CI_Controller {
 		if(isset($value['Result'])){
 			$data = $value['Result'];
 			$this->load->view('backend/template/header', $data);
-			echo "data";
+			//echo "data";
 		}else{
 			$this->load->view('backend/template/header');
-			echo "no data";
+			//echo "no data";
 		}
 		$this->load->view('backend/template/navigator');
     $this->load->view($value['View']);
@@ -61,10 +61,18 @@ class Home extends CI_Controller {
 	}
 
 	public function memberadd(){
+		$memberOne[0]['tb_authen_email']='';
+		$memberOne[0]['tb_authen_username']='';
+		$memberOne[0]['tb_authen_password']='';
+		$memberOne[0]['tb_authen_usertype']='';
+		$memberOne[0]['tb_authen_name']='';
+		$memberOne[0]['tb_authen_lastname']='';
+		$memberOne[0]['tb_authen_sex']='';
+		$memberOne[0]['tb_authen_ID']='';
 		$value = array(
-			// 'Result' => array(
-			// 	'memberOne' => ''
-			// ),
+			'Result' => array(
+				'memberOne' => $memberOne
+			),
 			'View' => 'backend/memberadd'
 		);
 		$this->LoadPage($value);
@@ -81,6 +89,8 @@ class Home extends CI_Controller {
 		);
 		$this->LoadPage($value);
 	}
+
+
 
 
 }

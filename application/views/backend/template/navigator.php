@@ -68,7 +68,7 @@
             </i><span class="menu-title">แบบทดสอบก่อนเรียน</span></a>
 
             </li>
-            <li><a href="Tables.html"><i class="fa fa-th-list fa-fw">
+            <li><a href="Tables.html"><i class="fa fa-edit fa-fw">
                 <div class="icon-bg bg-blue"></div>
             </i><span class="menu-title">แบบทดสอบหลังเรียน</span></a>
 

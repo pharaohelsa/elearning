@@ -40,7 +40,7 @@
 
                           <div class="col-sm-9 controls">
                               <div class="row">
-                                  <div class="col-xs-9"><input type="text" placeholder="username" class="form-control" name="tb_authen_username" value="<?=$memberOne[0]['tb_authen_username'] ?>"/></div>
+                                  <div class="col-xs-9"><input type="text" placeholder="username" class="form-control" name="tb_authen_username" value="<?=$memberOne[0]['tb_authen_username'] ?>" readonly/></div>
                               </div>
                           </div>
                       </div>
@@ -48,7 +48,7 @@
 
                           <div class="col-sm-9 controls">
                               <div class="row">
-                                  <div class="col-xs-4"><input type="password" placeholder="password" class="form-control" namve="tb_authen_password"  value="<?=$memberOne[0]['tb_authen_password'] ?>"/></div>
+                                  <div class="col-xs-4"><input type="password" placeholder="password" class="form-control" name="tb_authen_password"  value="<?=$memberOne[0]['tb_authen_password'] ?>"/></div>
                               </div>
                           </div>
                       </div>

@@ -30,20 +30,26 @@
                             <th>#</th>
                             <th>Username</th>
                             <th>Fullname</th>
-                            <th>action</th>
+                            <th class="">action</th>
                         </tr>
                         </thead>
                         <tbody>
                           <?php foreach ($getMember as $ckey): ?>
-                        <tr>
+                        <tr >
                             <td><?php echo $ckey['tb_authen_ID'] ?></td>
                             <td><?php echo $ckey['tb_authen_username'] ?></td>
                             <td><?php echo $ckey['tb_authen_name']." ".$ckey['tb_authen_lastname'] ?></td>
                             <td>
+                              <button type="button" data-hover="tooltip" title="แก้ไข" class="btn btn-yellow" onclick="location.href='<?php echo site_url('Home/memberedit/'.$ckey['tb_authen_ID']); ?>'" >
+                                  <i class="fa fa-edit"></i>แก้ไข
+                              </button>
+                              <button type="button" data-hover="tooltip" title="ลบ" class="btn btn-orange" onclick="JavaScript:if(confirm('ต้องการลบ') == true){window.location='<?php echo site_url('Admin/memberDelete/'.$ckey['tb_authen_ID']); ?>';}">
+                                  <i class="fa fa-trash-o"></i>ลบ
+                              </button>
                               <!-- <span class="label label-sm label-success">Approved</span> -->
                               <!-- <a href='<?php echo site_url('Home/memberadd'); ?>' class="btn btn-green navbar-btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;Add</a> -->
-                              <a href="<?php echo site_url('Home/memberedit/'.$ckey['tb_authen_ID']); ?>" ><span class="label label-sm label-warning"><i class="fa fa-edit"></i>&nbsp;แก้ไข</span></a>
-                              <a href="JavaScript:if(confirm('ต้องการลบ') == true){window.location='<?php echo site_url('Cultural/CulturalDel/'.$ckey['tb_authen_ID']); ?>';}" ><span class="label label-sm label-danger"><i class="fa fa-trash-o"></i>&nbsp;ลบ</span></a>
+                              <!-- <a href="<?php echo site_url('Home/memberedit/'.$ckey['tb_authen_ID']); ?>" style="border-radius: 50%;" ><span class="label label-sm label-warning"><i class="fa fa-edit"></i>&nbsp;แก้ไข</span></a>
+                              <a href="JavaScript:if(confirm('ต้องการลบ') == true){window.location='<?php echo site_url('Cultural/CulturalDel/'.$ckey['tb_authen_ID']); ?>';}" ><span class="label label-sm label-danger"><i class="fa fa-trash-o"></i>&nbsp;ลบ</span></a> -->
                             </td>
                         </tr>
                         <?php endforeach; ?>

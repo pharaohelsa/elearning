@@ -1,4 +1,4 @@
-
+<!--
 <div class="panel panel-orange">
     <div class="panel-heading">
         Registration form</div>
@@ -61,4 +61,96 @@
         </div>
         </form>
     </div>
-</div>
+</div> -->
+<div class="panel panel-orange">
+
+    <div class="panel-body pan">
+
+      <form class="container" id="needs-validation" novalidate>
+        <br>
+        <div class="jumbotron" >
+        <h2>Registration form</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="exampleInputEmail1">Username</label>
+            <input type="email" class="form-control" id="InputUsername" placeholder="Username" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="exampleInputEmail1">Password</label>
+            <input type="email" class="form-control" id="InputPassword" placeholder="Password" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="exampleInputEmail1">Confirm Password</label>
+            <input type="email" class="form-control" id="inputConfirmPassword" placeholder="ConfirmPassword" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom01">ชื่อ</label>
+            <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom02">สกุล</label>
+            <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="">เพศ</label><br>
+            <label class="form-check-label">
+              <input class="form-check-input" name="tb_authen_sex" type="radio" value="M" checked>
+              ชาย
+            </label>
+            <br>
+            <label class="form-check-label">
+              <input class="form-check-input" name="tb_authen_sex" type="radio" value="F">
+              หญิง
+            </label>
+          </div>
+
+
+          <div class="col-md-6 mb-3">
+            <label class="">ประเภทผู้ใช้งาน</label>
+                  <div class="col-xs-4"><select class="form-control" name="tb_authen_usertype">
+                      <option value="2">Teacher</option>
+                      <option value="3" selected>Student</option>
+                  </select>
+                  </div>
+
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-lg btn-block mb-3" type="submit">Submit form</button>
+      </form>
+    </div>
+  </div>
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+
+  window.addEventListener('load', function() {
+    var form = document.getElementById('needs-validation');
+    form.addEventListener('submit', function(event) {
+      if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+    }, false);
+  }, false);
+})();
+</script>

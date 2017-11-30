@@ -25,21 +25,26 @@ class Admin extends CI_Controller {
 
 	public function memberInsert(){
 		$input = $this->input->post();
-		var_dump($input);
-		if(!empty($input['tb_authen_ID']))
-		{ //edit
-			//$this->Adminmodel->memberInsert($input);
-			echo "edit".$input['tb_authen_ID'];
-			var_dump($input['tb_authen_ID']);
+		//var_dump($input);
+		if($input['tb_authen_ID']<>"")
+		{
+			//edit
+			$this->Adminmodel->memberEdit($input);
+
 		}else{
-			//$this->Adminmodel->memberInsert($input);
-			echo "add".$input['tb_authen_ID'];
-			var_dump($input['tb_authen_ID']);
+			//add
+			$this->Adminmodel->memberInsert($input);
+
 		}
-		exit();
+		//exit();
 		redirect('Home/member');
 
+	}
 
+	public function memberDelete(){
+		$id = $this->uri->segment(3);
+		$this->Adminmodel->memberDel($id);
+		redirect('Home/member');
 	}
 	// public function adminEdit(){
 	// 	$input = $this->input->post();
@@ -47,11 +52,7 @@ class Admin extends CI_Controller {
 	// 	redirect('Home/admin');
 	// }
   //
-	// public function adminDel(){
-	// 	$id = $this->uri->segment(3);
-	// 	$this->Adminmodel->adminDel($id);
-	// 	redirect('Home/admin');
-	// }
+
 
 
 
