@@ -20,10 +20,11 @@ class Home extends CI_Controller {
 	public function index(){
 		// redirect('Home/productlist');
 		//$this->load->view('body');
-		if(!isset($_SESSION["ADMIN_ID"])){
-			$this->load->view('frontend/index');
+		if(!isset($_SESSION["ADMIN_ID"])||$_SESSION['USERTYPE']!="1"){
+			redirect('Frontpage');
 		}else{
 			redirect('Home/cultural');
+
 		}
 	}
 

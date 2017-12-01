@@ -1,5 +1,3 @@
-
-
     <main role="main">
 
       <div id="myCarousel" class="carousel slide" data-ride="carousel">

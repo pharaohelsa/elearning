@@ -66,7 +66,7 @@
 
     <div class="panel-body pan">
 
-      <form class="container" id="needs-validation" novalidate>
+      <form class="container" action="<?php echo site_url('Admin/memberRegister'); ?>" method="post" id="needs-validation" novalidate>
         <br>
         <div class="jumbotron" >
         <h2>Registration form</h2>
@@ -74,32 +74,41 @@
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="exampleInputEmail1">Username</label>
-            <input type="email" class="form-control" id="InputUsername" placeholder="Username" required>
+            <input type="text" class="form-control" name="tb_authen_username" placeholder="Username" required>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="exampleInputEmail1">Password</label>
-            <input type="email" class="form-control" id="InputPassword" placeholder="Password" required>
+            <input type="text" class="form-control" name="tb_authen_password" placeholder="Password" required>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="exampleInputEmail1">Confirm Password</label>
-            <input type="email" class="form-control" id="inputConfirmPassword" placeholder="ConfirmPassword" required>
+            <input type="text" class="form-control" name="inputConfirmPassword" placeholder="ConfirmPassword" required>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="validationCustom01">ชื่อ</label>
-            <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="" required>
+            <input type="text" class="form-control" name="tb_authen_name" placeholder="First name" value="" required>
           </div>
           <div class="col-md-6 mb-3">
             <label for="validationCustom02">สกุล</label>
-            <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="" required>
+            <input type="text" class="form-control" name="tb_authen_lastname" placeholder="Last name" value="" required>
           </div>
         </div>
         <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="">ประเภทผู้ใช้งาน</label>
+                  <div class="col-xs-4"><select class="form-control" name="tb_authen_usertype">
+                      <option value="2">Teacher</option>
+                      <option value="3" selected>Student</option>
+                  </select>
+                  </div>
+
+          </div>
           <div class="col-md-6 mb-3">
             <label class="">เพศ</label><br>
             <label class="form-check-label">
@@ -112,29 +121,20 @@
               หญิง
             </label>
           </div>
-
-
-          <div class="col-md-6 mb-3">
-            <label class="">ประเภทผู้ใช้งาน</label>
-                  <div class="col-xs-4"><select class="form-control" name="tb_authen_usertype">
-                      <option value="2">Teacher</option>
-                      <option value="3" selected>Student</option>
-                  </select>
-                  </div>
-
-          </div>
         </div>
 
 
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+            <input type="email" class="form-control" name="tb_authen_email" aria-describedby="emailHelp" placeholder="email@yourmail.com" required>
           </div>
         </div>
 
         <button class="btn btn-primary btn-lg btn-block mb-3" type="submit">Submit form</button>
       </form>
+
+
     </div>
   </div>
 <script>

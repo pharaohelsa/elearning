@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Dashboard | Dashboard test</title>
+    <title>Manage | E-learning</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,12 +51,12 @@
             <nav id="topbar" role="navigation" style="margin-bottom: 0;" data-step="3" class="navbar navbar-default navbar-static-top">
             <div class="navbar-header">
                 <button type="button" data-toggle="collapse" data-target=".sidebar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                <a id="logo" href="<?php echo site_url('Home'); ?>" class="navbar-brand"><span class="fa fa-rocket"></span><span class="logo-text">E-learning</span><span style="display: none" class="logo-text-icon">µ</span></a></div>
+                <a id="logo" href="<?php echo site_url('Frontpage'); ?>" class="navbar-brand"><span class="fa fa-rocket"></span><span class="logo-text">Preview</span><span style="display: none" class="logo-text-icon">µ</span></a></div>
             <div class="topbar-main"><a id="menu-toggle" href="#" class="hidden-xs"><i class="fa fa-bars"></i></a>
 
-                <form id="topbar-search" action="" method="" class="hidden-sm hidden-xs">
+                <!-- <form id="topbar-search" action="" method="" class="hidden-sm hidden-xs">
                     <div class="input-icon right text-white"><a href="#"><i class="fa fa-search"></i></a><input type="text" placeholder="Search here..." class="form-control text-white"/></div>
-                </form>
+                </form> -->
                 <!-- <div class="news-update-box hidden-xs"><span class="text-uppercase mrm pull-left text-white">News:</span>
                     <ul id="news-update" class="ticker list-unstyled">
                         <li>Welcome to KAdmin - Responsive Multi-Style Admin Template</li>

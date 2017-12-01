@@ -7,13 +7,14 @@
     <meta name="author" content="">
     <link rel="icon" href="http://getbootstrap.com/favicon.ico">
 
-    <title>Carousel Template for Bootstrap</title>
+    <title>E-learning</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url(); ?>assets/css/carousel.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/styles/font-awesome.min.css">
   </head>
   <body>
 
@@ -40,17 +41,37 @@
             <!-- <li class="nav-item">
               <a class="nav-link disabled" href="http://getbootstrap.com/docs/4.0/examples/carousel/#">Disabled</a>
             </li> -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="<?php echo site_url('Home/login'); ?>">เข้าสู่ระบบ</a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link" href="<?php echo site_url('Frontpage/register'); ?>">สมัครสมาชิก</a>
             </li>
           </ul>
-          <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+          <?php
+          if(isset($_SESSION['ADMIN_ID'])){
+            ?>
+            <i class="fa fa-address-card" aria-hidden="true"></i>
+            <span class="mr-sm-2 text-white">
+              <?php echo $_SESSION['ADMIN_NAME'] ?>
+            </span>
+            <?php if($_SESSION['USERTYPE']=="1"){ ?>
+            <button type="button" class="btn btn-primary mr-sm-2" onclick="location.href='<?php echo site_url('home'); ?>'">จัดการระบบ</button>
+            <?php } ?>
+            <button type="button" class="btn btn-danger" onclick="location.href='<?php echo site_url('Admin/logout'); ?>'">Log Out</button>
+            <?php
+          }else {
+            ?>
+            <form class="form-inline mt-2 mt-md-0" action="<?php echo site_url('/Admin/login'); ?>" method="post">
+              <input class="form-control mr-sm-2" type="text" placeholder="Username" name="tb_admin_username" aria-label="Username">
+              <input class="form-control mr-sm-2" type="password" placeholder="Password" name="tb_admin_password" aria-label="Password">
+              <button class="btn btn-success my-2 my-sm-0" type="submit">Login</button>
+            </form>
+            <?php
+          }
+          ?>
+
+
         </div>
       </nav>
     </header>
