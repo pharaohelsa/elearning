@@ -24,9 +24,12 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <?php
+            $active = $this->uri->segment(3);
+         ?>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item <?php if($active==""){ echo "active";} ?>">
               <a class="nav-link" href="<?php echo site_url('Frontpage'); ?>">หน้าแรก <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
@@ -44,8 +47,8 @@
             <!-- <li class="nav-item">
               <a class="nav-link" href="<?php echo site_url('Home/login'); ?>">เข้าสู่ระบบ</a>
             </li> -->
-            <li class="nav-item">
-              <a class="nav-link" href="<?php echo site_url('Frontpage/register'); ?>">สมัครสมาชิก</a>
+            <li class="nav-item <?php if($active=="reg"){ echo "active";} ?>">
+              <a class="nav-link" href="<?php echo site_url('Frontpage/register/reg'); ?>">สมัครสมาชิก</a>
             </li>
           </ul>
           <?php

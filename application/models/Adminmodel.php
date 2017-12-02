@@ -15,7 +15,7 @@ class Adminmodel extends CI_Model
     return $query;
   }
   public function memberInsert($input){
-     var_dump($input);
+    //var_dump($input);
     $this->db->insert('tb_authen',$input);
   }
 

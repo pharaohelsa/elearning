@@ -83,12 +83,12 @@
             <input type="text" class="form-control" name="tb_authen_password" placeholder="Password" required>
           </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-6 mb-3">
             <label for="exampleInputEmail1">Confirm Password</label>
             <input type="text" class="form-control" name="inputConfirmPassword" placeholder="ConfirmPassword" required>
           </div>
-        </div>
+        </div> -->
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="validationCustom01">ชื่อ</label>
