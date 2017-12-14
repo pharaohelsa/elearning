@@ -32,8 +32,8 @@
             <li class="nav-item <?php if($active==""){ echo "active";} ?>">
               <a class="nav-link" href="<?php echo site_url('Frontpage'); ?>">หน้าแรก <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">แบบทดสอบก่อนเรียน</a>
+            <li class="nav-item  <?php if($active=="pre"){ echo "active";} ?>">
+              <a class="nav-link" href="<?php echo site_url('Frontpage/pretest/pre'); ?>">แบบทดสอบก่อนเรียน</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">แบบทดสอบหลังเรียน</a>

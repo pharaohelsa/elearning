@@ -36,5 +36,15 @@ class Frontpage extends CI_Controller {
         $this->LoadPage($value);
     }
 
+    public function pretest(){
+        $value = array(
+          // 'Result' => array(
+          // 	'memberOne' => ''
+          // ),
+          'View' => 'frontend/pretest'
+        );
+        $this->LoadPage($value);
+    }
+
 }
  ?>
