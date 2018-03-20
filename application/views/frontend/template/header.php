@@ -32,14 +32,14 @@
             <li class="nav-item <?php if($active==""){ echo "active";} ?>">
               <a class="nav-link" href="<?php echo site_url('Frontpage'); ?>">หน้าแรก <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item  <?php if($active=="pre"){ echo "active";} ?>">
-              <a class="nav-link" href="<?php echo site_url('Frontpage/pretest/pre'); ?>">แบบทดสอบก่อนเรียน</a>
+            <li class="nav-item  <?php if($active=="2"){ echo "active";} ?>">
+              <a class="nav-link" href="<?php echo site_url('Frontpage/pretest/2'); ?>">แบบทดสอบ</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="#">แบบทดสอบหลังเรียน</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">ลำดับคะแนน</a>
+            </li> -->
+            <li class="nav-item <?php if($active=="3"){ echo "active";} ?>">
+              <a class="nav-link" href="<?php echo site_url('Frontpage/score/3'); ?>">ลำดับคะแนน</a>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link disabled" href="http://getbootstrap.com/docs/4.0/examples/carousel/#">Disabled</a>
@@ -47,8 +47,8 @@
             <!-- <li class="nav-item">
               <a class="nav-link" href="<?php echo site_url('Home/login'); ?>">เข้าสู่ระบบ</a>
             </li> -->
-            <li class="nav-item <?php if($active=="reg"){ echo "active";} ?>">
-              <a class="nav-link" href="<?php echo site_url('Frontpage/register/reg'); ?>">สมัครสมาชิก</a>
+            <li class="nav-item <?php if($active=="4"){ echo "active";} ?>">
+              <a class="nav-link" href="<?php echo site_url('Frontpage/register/4'); ?>">สมัครสมาชิก</a>
             </li>
           </ul>
           <?php

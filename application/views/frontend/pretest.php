@@ -1,66 +1,43 @@
+
 <div class="panel panel-orange">
-    <div class="panel-heading">
-        แบบทดสอบก่อนเรียน</div>
+
     <div class="panel-body pan">
-        <form action="#">
+
+      <form class="container" action="<?php echo site_url('Admin/memberRegister'); ?>" method="post" id="needs-validation" novalidate>
+        <br>
         <div class="jumbotron" >
-        <h2>แบบทดสอบก่อนเรียน</h2>
+        <h2>แบบทดสอบ</h2>
         </div>
-        <div class="form-body pal">
-            <div class="form-group">
-                <div class="input-icon right">
-                    <i class="fa fa-user"></i>
-                    <input id="inputName" type="text" placeholder="Username" class="form-control" /></div>
-            </div>
-            <div class="form-group">
-                <div class="input-icon right">
-                    <i class="fa fa-envelope"></i>
-                    <input id="inputEmail" type="text" placeholder="Email address" class="form-control" /></div>
-            </div>
-            <div class="form-group">
-                <div class="input-icon right">
-                    <i class="fa fa-lock"></i>
-                    <input id="inputPassword" type="password" placeholder="Password" class="form-control" /></div>
-            </div>
-            <div class="form-group">
-                <div class="input-icon right">
-                    <i class="fa fa-lock"></i>
-                    <input id="inputConfirmPassword" type="password" placeholder="Confirm Password" class="form-control" /></div>
-            </div>
-            <hr />
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input id="inputFirstName" type="text" placeholder="First Name" class="form-control" /></div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input id="inputLastName" type="text" placeholder="Last Name" class="form-control" /></div>
-                </div>
-            </div>
-            <div class="form-group">
-                <select class="form-control">
-                    <option>Gender</option>
-                    <option value="0">Male</option>
-                    <option value="1">Female</option>
-                    <option value="2">Other</option>
-                </select></div>
-            <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        <input tabindex="5" type="checkbox" />&nbsp; I want to receive news and special
-                        offers</label></div>
-            </div>
-            <div class="form-group mbn">
-                <div class="checkbox">
-                    <label>
-                        <input tabindex="5" type="checkbox" />&nbsp; I agree with the Terms and Conditions</label></div>
-            </div>
+        <div class="row" style="margin:0 0 30px 10px;">
+          <div class="col-lg-12 mb-3">
+
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">บทที่ 1 เรื่อง สมบัติของจำนวนนับ <a class="btn btn-secondary" href="#" role="button" style="margin-left:5em;">แบบทดสอบก่อนเรียน</a> <a class="btn btn-primary" href="#" role="button">แบบทดสอบหลังเรียน</a></li>
+              <li class="list-group-item">บทที่ 2 เรื่อง ระบบจำนวนเต็ม <a class="btn btn-secondary" href="#" role="button" style="margin-left:7em;">แบบทดสอบก่อนเรียน</a> <a class="btn btn-primary" href="#" role="button">แบบทดสอบหลังเรียน</a></li>
+              <li class="list-group-item">บทที่ 3 เรื่องยกกำลัง <a class="btn btn-secondary" href="#" role="button" style="margin-left:10em;">แบบทดสอบก่อนเรียน</a> <a class="btn btn-primary" href="#" role="button">แบบทดสอบหลังเรียน</a></li>
+            </ul>
+          </div>
+
+          <!-- <div class="col-md-6 mb-3">
+            แบบทดสอบหลังเรียน
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><a class="nav-link" href="<?php echo site_url('Frontpage/pretest/pre'); ?>">บทที่ 1 เรื่อง สมบัติของจำนวนนับ</a></li>
+              <li class="list-group-item"><a class="nav-link" href="<?php echo site_url('Frontpage/pretest/pre'); ?>">บทที่ 2 เรื่อง ระบบจำนวนเต็ม</a></li>
+              <li class="list-group-item"><a class="nav-link" href="<?php echo site_url('Frontpage/pretest/pre'); ?>">บทที่ 3 เรื่องยกกำลัง</a></li>
+            </ul>
+          </div> -->
+
         </div>
-        <div class="form-actions text-right pal">
-            <button type="submit" class="btn btn-primary">
-                Submit</button>
-        </div>
-        </form>
+        <!-- <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="exampleInputEmail1">Confirm Password</label>
+            <input type="text" class="form-control" name="inputConfirmPassword" placeholder="ConfirmPassword" required>
+          </div>
+        </div> -->
+
+
+      </form>
+
+
     </div>
-</div>
+  </div>

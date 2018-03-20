@@ -46,5 +46,15 @@ class Frontpage extends CI_Controller {
         $this->LoadPage($value);
     }
 
+    public function score(){
+        $value = array(
+          // 'Result' => array(
+          // 	'memberOne' => ''
+          // ),
+          'View' => 'frontend/score'
+        );
+        $this->LoadPage($value);
+    }
+
 }
  ?>

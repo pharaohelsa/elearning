@@ -52,7 +52,7 @@
              <div class="clearfix"></div>
             <li class="active"><a href="<?php echo site_url('Home'); ?>"><i class="fa fa-tachometer fa-fw">
                 <div class="icon-bg bg-orange"></div>
-            </i><span class="menu-title">Dashboard</span></a></li>
+            </i><span class="menu-title">หน้าแรก</span></a></li>
             <li><a href="<?php echo site_url('Home/member'); ?>"><i class="fa fa-user fa-fw">
                 <div class="icon-bg bg-pink"></div>
             </i><span class="menu-title">สมาชิก</span></a>
