@@ -31,6 +31,16 @@ class Culturalmodel extends CI_Model
     ->get('tb_authen')
     ->result_array();
   }
+  public function Lesson_select($id){
+    return $this->db
+    // ->where('tb_quiz.tb_lessonID',$id)
+    // ->join('tb_answer','tb_quiz.tb_lessonID = tb_answer.tb_lessonID')
+    // ->get('tb_quiz')
+    ->where('tb_lessonID',$id)
+    ->order_by('tb_Quiz_Number','asc')
+    ->get('tb_quiz')
+    ->result_array();
+  }
 
 
 

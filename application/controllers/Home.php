@@ -91,6 +91,27 @@ class Home extends CI_Controller {
 		$this->LoadPage($value);
 	}
 
+	public function lesson_list(){
+		$value = array(
+			// 'Result' => array(
+			// 	'getCultural' => $getCultural
+			// ),
+			'View' => 'backend/lesson_list'
+		);
+		$this->LoadPage($value);
+	}
+
+	public function lesson_detail(){
+		$id = $this->uri->segment(3);		//lesson id
+		$getLessonDetail = $this->Culturalmodel->Lesson_select($id);
+		$value = array(
+			'Result' => array(
+				'getLessonDetail' => $getLessonDetail
+			),
+			'View' => 'backend/lesson_detail'
+		);
+		$this->LoadPage($value);
+	}
 
 
 

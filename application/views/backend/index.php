@@ -82,55 +82,23 @@
                                 <div class="panel">
                                     <div class="panel-body">
                                         <div class="row">
-                                            <div class="col-md-8">
-                                                <h4 class="mbs">
-                                                    Network Performance</h4>
-                                                <p class="help-block">
-                                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem...</p>
+                                            <div class="col-lg-12">
+                                                <h4 class="mbs">สาระการเรียนรู้</h4>
+                                                <div id="area-chart-spline" style="width: 100%; height: 300px">
+                                                </div>
+                                                <h4 class="mbs">จุดประสงค์รายวิชา</h4>
+                                                <div id="area-chart-spline" style="width: 100%; height: 300px">
+                                                </div>
+                                                <h4 class="mbs">ภาพแบนเนอร์</h4>
                                                 <div id="area-chart-spline" style="width: 100%; height: 300px">
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <h4 class="mbm">
-                                                    Server Status</h4>
-                                                <span class="task-item">CPU Usage (25 - 32 cpus)<small class="pull-right text-muted">40%</small><div
-                                                    class="progress progress-sm">
-                                                    <div role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
-                                                        style="width: 40%;" class="progress-bar progress-bar-orange">
-                                                        <span class="sr-only">40% Complete (success)</span></div>
-                                                </div>
-                                                </span><span>Memory Usage (2.5GB)<small class="pull-right text-muted">60%</small><div
-                                                    class="progress progress-sm">
-                                                    <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                        style="width: 60%;" class="progress-bar progress-bar-blue">
-                                                        <span class="sr-only">60% Complete (success)</span></div>
-                                                </div>
-                                                </span><span>Disk Usage (C:\ 120GB , D:\ 430GB)<small class="pull-right text-muted">55%</small><div
-                                                    class="progress progress-sm">
-                                                    <div role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"
-                                                        style="width: 55%;" class="progress-bar progress-bar-green">
-                                                        <span class="sr-only">55% Complete (success)</span></div>
-                                                </div>
-                                                </span><span>Domain (2/5)<small class="pull-right text-muted">66%</small><div class="progress progress-sm">
-                                                    <div role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"
-                                                        style="width: 66%;" class="progress-bar progress-bar-yellow">
-                                                        <span class="sr-only">66% Complete (success)</span></div>
-                                                </div>
-                                                </span><span>Database (90/100)<small class="pull-right text-muted">90%</small><div
-                                                    class="progress progress-sm">
-                                                    <div role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-                                                        style="width: 90%;" class="progress-bar progress-bar-pink">
-                                                        <span class="sr-only">90% Complete (success)</span></div>
-                                                </div>
-                                                </span><span>Email Account (25/50)<small class="pull-right text-muted">50%</small><div
-                                                    class="progress progress-sm">
-                                                    <div role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                                                        style="width: 50%;" class="progress-bar progress-bar-violet">
-                                                        <span class="sr-only">50% Complete (success)</span></div>
-                                                </div>
-                                                </span>
-                                            </div>
+                                            <!-- <div class="col-md-4">
+
+                                            </div> -->
+                                              <button class="btn btn-primary btn-lg btn-block mb-3" type="submit">Submit form</button>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +107,7 @@
                             </div>
                         </div>
 
-                        <div class="row mbl">
+                        <!-- <div class="row mbl">
                             <div class="col-lg-4">
 
                             </div>
@@ -149,14 +117,10 @@
                         </div>
                         <div class="row">
 
-                            <!--<div class="col-lg-4">
-                            <div id="my-calendar"></div>
-                        </div>-->
-
                             <div class="col-lg-12">
 
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!--END CONTENT-->
