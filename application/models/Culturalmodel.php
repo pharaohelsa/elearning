@@ -41,7 +41,38 @@ class Culturalmodel extends CI_Model
     ->get('tb_quiz')
     ->result_array();
   }
+  public function getAnswer($choice,$lessonId){ //correct answer
+    return $this->db
+    ->where('tb_Quiz_Number',$choice)
+    ->where('tb_lessonID',$lessonId)
+    ->where('tb_answer_CorrectStatus','Y')
+    ->get('tb_answer')
+    ->result_array();
+  }
 
+  public function getAllAnswer(){ //all answer
+    return $this->db
+    // ->where('tb_lessonID',$lessonID)
+    // ->where('tb_Quiz_Number',$choice)
+    ->get('tb_answer')
+    ->result_array();
+  }
+
+  public function M_exam($id){
+    return $this->db
+    ->where('tb_lessonID ',$id)
+    ->get('tb_quiz')
+    ->result_array();
+
+  }
+
+  public function getCheckAnswer($id){ //correct answer
+    return $this->db
+    ->where('tb_answer_ID',$id)
+    ->where('tb_answer_CorrectStatus','Y')
+    ->get('tb_answer')
+    ->result_array();
+  }
 
 
 }

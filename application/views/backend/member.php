@@ -18,10 +18,17 @@
     <!--BEGIN CONTENT-->
     <div class="page-content">
         <div id="tab-general">
+          <div class="row mbl">
+            <div class="col-lg-12">
+              <div class="panel">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-lg-12">
+          <button onclick="location.href='<?php echo site_url('Home/memberadd'); ?>'" type="button" class="btn btn-blue navbar-btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;เพิ่มสมาชิก</button>
             <div class="panel panel-green">
                 <div class="panel-heading">จัดการข้อมูลสมาชิก</div>
                 <div id="bs-example-navbar-collapse-3" class="collapse navbar-collapse" >
-                    <button onclick="location.href='<?php echo site_url('Home/memberadd'); ?>'" type="button" class="btn btn-green navbar-btn pull-right"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;เพิ่มสมาชิก</button>
+
                 </div>
                 <div class="panel-body">
                     <table class="table table-hover table-bordered">
@@ -58,5 +65,11 @@
                 </div>
             </div>
         </div>
+          </div>
+            </div>
+              </div>
+                </div>
+                  </div>
+                    </div>
     </div>
     <!--END CONTENT-->

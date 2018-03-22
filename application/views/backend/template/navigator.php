@@ -58,11 +58,11 @@
             </i><span class="menu-title">สมาชิก</span></a>
 
             </li>
-            <li><a href="#"><i class="fa fa-file-archive-o fa-fw">
+            <!-- <li><a href="#"><i class="fa fa-file-archive-o fa-fw">
                 <div class="icon-bg bg-green"></div>
             </i><span class="menu-title">บทเรียน</span></a>
 
-            </li>
+            </li> -->
             <li><a href="<?php echo site_url('Home/lesson_list'); ?>"><i class="fa fa-edit fa-fw">
                 <div class="icon-bg bg-violet"></div>
             </i><span class="menu-title">แบบทดสอบ</span></a>

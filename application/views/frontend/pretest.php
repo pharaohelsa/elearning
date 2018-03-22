@@ -8,13 +8,23 @@
         <div class="jumbotron" >
         <h2>แบบทดสอบ</h2>
         </div>
+        <?php
+        $getCode=$this->uri->segment(3);
+        switch ($getCode) {
+            case 101:
+                echo '<div class="alert alert-danger" role="alert">ยังไม่ได้ล็อกอิน</div>';
+                break;
+            default:
+                echo '<div class="alert alert-danger" role="alert">ยังไม่ได้ล็อกอิน</div>';
+        }
+         ?>
         <div class="row" style="margin:0 0 30px 10px;">
           <div class="col-lg-12 mb-3">
 
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">บทที่ 1 เรื่อง สมบัติของจำนวนนับ <a class="btn btn-secondary" href="#" role="button" style="margin-left:5em;">แบบทดสอบก่อนเรียน</a> <a class="btn btn-primary" href="#" role="button">แบบทดสอบหลังเรียน</a></li>
-              <li class="list-group-item">บทที่ 2 เรื่อง ระบบจำนวนเต็ม <a class="btn btn-secondary" href="#" role="button" style="margin-left:7em;">แบบทดสอบก่อนเรียน</a> <a class="btn btn-primary" href="#" role="button">แบบทดสอบหลังเรียน</a></li>
-              <li class="list-group-item">บทที่ 3 เรื่องยกกำลัง <a class="btn btn-secondary" href="#" role="button" style="margin-left:10em;">แบบทดสอบก่อนเรียน</a> <a class="btn btn-primary" href="#" role="button">แบบทดสอบหลังเรียน</a></li>
+              <li class="list-group-item">บทที่ 1 เรื่อง สมบัติของจำนวนนับ <a class="btn btn-secondary" href="<?php echo site_url('Frontpage/exam_pre/1'); ?>" role="button" style="margin-left:5em;">แบบทดสอบก่อนเรียน</a> <a class="btn btn-primary" href="<?php echo site_url('Frontpage/exam_post/1'); ?>" role="button">แบบทดสอบหลังเรียน</a></li>
+              <li class="list-group-item">บทที่ 2 เรื่อง ระบบจำนวนเต็ม <a class="btn btn-secondary" href="<?php echo site_url('Frontpage/exam_pre/2'); ?>" role="button" style="margin-left:7em;">แบบทดสอบก่อนเรียน</a> <a class="btn btn-primary" href="<?php echo site_url('Frontpage/exam_post/2'); ?>" role="button">แบบทดสอบหลังเรียน</a></li>
+              <li class="list-group-item">บทที่ 3 เรื่องยกกำลัง <a class="btn btn-secondary" href="<?php echo site_url('Frontpage/exam_pre/3'); ?>" role="button" style="margin-left:10em;">แบบทดสอบก่อนเรียน</a> <a class="btn btn-primary" href="<?php echo site_url('Frontpage/exam_post/3'); ?>" role="button">แบบทดสอบหลังเรียน</a></li>
             </ul>
           </div>
 

@@ -4,7 +4,7 @@
     <!--BEGIN TITLE & BREADCRUMB PAGE-->
     <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
         <div class="page-header pull-left">
-            <div class="page-title">แบบทดสอบ</div>
+            <div class="page-title">รายการแบบทดสอบ</div>
         </div>
         <ol class="breadcrumb page-breadcrumb pull-right">
             <li><i class="fa fa-home"></i>&nbsp;<a href="<?php echo site_url('Home'); ?>">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
@@ -31,7 +31,7 @@
                                       <li class="list-group-item">บทที่ 2 เรื่อง ระบบจำนวนเต็ม <a class="btn btn-secondary" href="#" role="button" style="margin-left:7em;">แบบทดสอบก่อนเรียน</a> <a class="btn btn-primary" href="#" role="button">แบบทดสอบหลังเรียน</a></li>
                                       <li class="list-group-item">บทที่ 3 เรื่องยกกำลัง <a class="btn btn-secondary" href="#" role="button" style="margin-left:10em;">แบบทดสอบก่อนเรียน</a> <a class="btn btn-primary" href="#" role="button">แบบทดสอบหลังเรียน</a></li>
                                     </ul> -->
-                                    <div class="panel panel-yellow">
+                                    <div class="panel panel-green">
                                         <div class="panel-heading">รายการแบบทดสอบ</div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -46,7 +46,7 @@
                                                 <tbody>
                                                 <tr>
                                                     <td>บทที่ 1 เรื่อง สมบัติของจำนวนนับ</td>
-                                                    <td>
+                                                    <td width="10%">
                                                       <button type="button" data-hover="tooltip" title="แก้ไข" class="btn btn-yellow" onclick="location.href='<?php  echo site_url('Home/lesson_detail/1') ?>'" >
                                                         <i class="fa fa-edit"></i>แก้ไข
                                                       </button>

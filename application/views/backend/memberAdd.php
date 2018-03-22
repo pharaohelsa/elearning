@@ -19,8 +19,14 @@
     <!--BEGIN CONTENT-->
     <div class="page-content">
         <div id="tab-general">
-          <div id="generalTabContent" class="tab-content">
-            <button onclick="location.href='<?php echo site_url('Home/member'); ?>'" type="button" class="btn btn-green navbar-btn pull-right"><i class="fa fa-fast-backward" aria-hidden="true"></i>&nbsp;ฺกลับ</button>
+          <div class="row mbl">
+            <div class="col-lg-12">
+              <div class="panel">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-lg-12">
+          <!-- <div id="generalTabContent" class="tab-content"> -->
+            <button onclick="location.href='<?php echo site_url('Home/member'); ?>'" type="button" class="btn btn-yellow navbar-btn pull-right"><i class="fa fa-fast-backward" aria-hidden="true"></i>&nbsp;ฺกลับ</button>
               <div id="tab-edit" class="tab-pane fade in active form-horizontal">
                   <!-- <form action="#" class="form-horizontal"> -->
                     <?php
@@ -120,5 +126,13 @@
 
           </div>
         </div>
+      </div>
+    </div>
+  <!-- </div> -->
+</div>
+</div>
+
+    </div>
+
     </div>
     <!--END CONTENT-->

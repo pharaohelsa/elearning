@@ -52,12 +52,40 @@ class Admin extends CI_Controller {
 	// 	$this->Adminmodel->adminEdit($input);
 	// 	redirect('Home/admin');
 	// }
-  //
+	//
 	public function memberRegister(){
 		$input = $this->input->post();
 		$this->Adminmodel->memberInsert($input);
 		redirect('Frontpage');
 
+	}
+
+	public function submitExam(){
+		$input = $this->input->post();
+		// print_r($input);
+		//var_dump($input);
+		//echo count($input["Radios"]);
+		$score=0;
+		for ($i=1; $i <= count($input["Radios"]) ; $i++) {
+			//print_r($input["Radios"][$i]."<br>"); //tb_answer_ID
+			if (!empty($this->Culturalmodel->getCheckAnswer($input["Radios"][$i]))) {
+				$score++;
+			}
+		}
+		//print_r($score);
+		$insertData['tb_lessonID']=$input['tb_lessonID'];
+		$insertData['tb_score_total']=$score;
+		$insertData['tb_score_userID']=$_SESSION['ADMIN_ID'];
+		//print_r($insertData);
+		$this->Adminmodel->ScoreInsert($insertData);
+		redirect('Frontpage/pretest');
+
+	}
+
+	public function Quiz_Delete(){
+		$id = $this->uri->segment(3);
+		$this->Adminmodel->QuizDel($id);
+		redirect('Home/lesson_list');
 	}
 
 
