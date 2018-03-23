@@ -73,6 +73,7 @@ class Admin extends CI_Controller {
 			}
 		}
 		//print_r($score);
+		$insertData['prepost']=$input['prepost']; //pretest/posttest
 		$insertData['tb_lessonID']=$input['tb_lessonID'];
 		$insertData['tb_score_total']=$score;
 		$insertData['tb_score_userID']=$_SESSION['ADMIN_ID'];
@@ -83,9 +84,40 @@ class Admin extends CI_Controller {
 	}
 
 	public function Quiz_Delete(){
-		$id = $this->uri->segment(3);
-		$this->Adminmodel->QuizDel($id);
+		$lessonID = $this->uri->segment(3); //lessonID
+		$quizID = $this->uri->segment(4); //quizID
+		$this->Adminmodel->QuizDel($quizID);
+		$this->Adminmodel->AnswerDel($lessonID,$quizID);
+
 		redirect('Home/lesson_list');
+	}
+
+
+	public function quiz_Insert(){
+		$input = $this->input->post();
+		//print_r($input);
+		$quiz_input['tb_lessonID'] = $input['tb_lessonID'];
+		$quiz_input['tb_Quiz_title'] = $input['tb_Quiz_title'];
+		$getQuizID = $this->Adminmodel->quizInsert($quiz_input);
+
+		//print_r($input['tb_answer_title']);
+		for ($i=0; $i < count($input['tb_answer_title']) ; $i++) {
+
+			//echo $input["tb_answer_title"][$i]."<br>";
+			$choice_input['tb_answer_title'] = $input["tb_answer_title"][$i];
+			$choice_input['tb_Quiz_ID'] = $getQuizID;
+			$choice_input['tb_lessonID'] = $input["tb_lessonID"];
+			$choice_input['tb_answer_CreateBy'] = $_SESSION['ADMIN_ID'];
+			if(($input['choice_Correct']-1)==$i){
+				$choice_input['tb_answer_CorrectStatus'] = 'Y';
+			}else{
+				$choice_input['tb_answer_CorrectStatus'] = 'N';
+			}
+			$this->Adminmodel->AnswerInsert($choice_input);
+		}
+
+		redirect('Home/lesson_list');
+
 	}
 
 

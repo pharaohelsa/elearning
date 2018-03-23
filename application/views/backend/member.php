@@ -37,7 +37,7 @@
                             <th>#</th>
                             <th>Username</th>
                             <th>Fullname</th>
-                            <th class="">action</th>
+                            <th class="" width="20%">action</th>
                         </tr>
                         </thead>
                         <tbody>

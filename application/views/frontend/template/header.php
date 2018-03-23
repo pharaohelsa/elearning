@@ -15,6 +15,11 @@
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url(); ?>assets/css/carousel.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/styles/font-awesome.min.css">
+
+    <!-- data table begin-->
+    <link href="<?php echo base_url(); ?>assets/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <!-- data table end-->
+
   </head>
   <body>
 

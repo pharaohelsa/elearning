@@ -37,13 +37,13 @@ class Culturalmodel extends CI_Model
     // ->join('tb_answer','tb_quiz.tb_lessonID = tb_answer.tb_lessonID')
     // ->get('tb_quiz')
     ->where('tb_lessonID',$id)
-    ->order_by('tb_Quiz_Number','asc')
+    ->order_by('tb_Quiz_ID','asc')
     ->get('tb_quiz')
     ->result_array();
   }
   public function getAnswer($choice,$lessonId){ //correct answer
     return $this->db
-    ->where('tb_Quiz_Number',$choice)
+    ->where('tb_Quiz_ID',$choice)
     ->where('tb_lessonID',$lessonId)
     ->where('tb_answer_CorrectStatus','Y')
     ->get('tb_answer')
@@ -71,6 +71,13 @@ class Culturalmodel extends CI_Model
     ->where('tb_answer_ID',$id)
     ->where('tb_answer_CorrectStatus','Y')
     ->get('tb_answer')
+    ->result_array();
+  }
+
+
+  public function getScorelist(){ //correct answer
+    return $this->db
+    ->get('tb_score')
     ->result_array();
   }
 

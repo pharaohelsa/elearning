@@ -4,7 +4,7 @@
     <form class="container" action="<?php echo site_url('Admin/submitExam'); ?>" method="post" id="needs-validation" validate>
       <br>
       <div class="jumbotron" >
-        <h2>แบบทดสอบ</h2>
+        <h2>แบบทดสอบก่อนเรียน</h2>
         <div class="panel-heading">
         <?php
         $id = $this->uri->segment(3); // lessonID
@@ -29,19 +29,20 @@
         <div class="col-lg-12 mb-3">
 
           <ul class="list-group list-group-flush">
+            <?php $i=1; ?>
             <?php  foreach ($getExam as $ckey): ?>
               <li class="list-group-item">
                 <div class="col-lg-12 mb-3">
-                  <span>ข้อ<?php echo $ckey['tb_Quiz_Number'] ?></span>
+                  <span>ข้อ<?php echo $i ?></span>
                   <span><?php echo $ckey['tb_Quiz_title'] ?></span>
                 </div>
                 <div class="col-lg-12 mb-3">
                   <?php foreach ($getAllAnswer as $value) : ?>
-                    <?php if (($value['tb_Quiz_Number']==$ckey['tb_Quiz_Number']) &&($value['tb_lessonID']==$ckey['tb_lessonID']) ){ ?>
+                    <?php if (($value['tb_Quiz_ID']==$ckey['tb_Quiz_ID']) &&($value['tb_lessonID']==$ckey['tb_lessonID']) ){ ?>
                     <!-- <div style="margin-left:20px;"><?php echo $value['tb_answer_title'] ?></div> -->
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="Radios[<?=$ckey['tb_Quiz_Number']?>]" value="<?=$value['tb_answer_ID']?>" required>
-                      <label class="form-check-label" for="Radios[<?=$ckey['tb_Quiz_Number']?>]">
+                      <input class="form-check-input" type="radio" name="Radios[<?=$ckey['tb_Quiz_ID']?>]" value="<?=$value['tb_answer_ID']?>" required>
+                      <label class="form-check-label" for="Radios[<?=$ckey['tb_Quiz_ID']?>]">
                         <?php echo $value['tb_answer_title'] ?>
                       </label>
                     </div>
@@ -49,6 +50,7 @@
                 <?php endforeach; ?>
               </div>
             </li>
+            <?php $i++; ?>
           <?php endforeach; ?>
 
         </ul>
@@ -71,6 +73,7 @@
 </div>
 </div> -->
 <input type="hidden" name="tb_lessonID" value="<?=$id?>">
+<input type="hidden" name="prepost" value="แบบทดสอบก่อนเรียน">
 <button type="submit" class="btn btn-blue btn-block" style="padding:15px 0 15px 0">ส่งคำตอบ</button>
 </form>
 <br><br>

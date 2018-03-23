@@ -6,7 +6,7 @@
       <form class="container" action="<?php echo site_url('Admin/memberRegister'); ?>" method="post" id="needs-validation" novalidate>
         <br>
         <div class="jumbotron" >
-        <h2>Registration form</h2>
+        <h2>ลงทะเบียนสมัครสมาชิก</h2>
         </div>
         <div class="row">
           <div class="col-md-6 mb-3">

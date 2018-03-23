@@ -42,6 +42,24 @@ class Adminmodel extends CI_Model
     ->delete('tb_quiz');
 	}
 
+  public function AnswerDel($lessonID,$QuizID){
+    $this->db
+    ->where('tb_lessonID',$lessonID)
+    ->where('tb_Quiz_ID',$QuizID)
+    ->delete('tb_answer');
+  }
+
+  public function quizInsert($input){
+    //var_dump($input);
+    $this->db->insert('tb_quiz',$input);
+    return $this->db->insert_id();
+  }
+
+  public function AnswerInsert($input){
+    //var_dump($input);
+    $this->db->insert('tb_answer',$input);
+  }
+
   // public function adminEdit($input){
   //   $this->db->where('tb_admin_id',$input['tb_admin_id'])->update('tb_admin',$input);
 	// }

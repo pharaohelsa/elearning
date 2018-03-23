@@ -30,61 +30,16 @@
               <div id="tab-edit" class="tab-pane fade in active form-horizontal">
                   <!-- <form action="#" class="form-horizontal"> -->
                     <?php
-                    echo form_open('Admin/quizInsert');
+                    echo form_open('Admin/quiz_Insert');
                     ?>
-                    <!-- <h3>Account Setting</h3>
-
-                      <div class="form-group"><label class="col-sm-3 control-label">คำถาม</label>
-
-                          <div class="col-sm-9 controls">
-                              <div class="row">
-                                  <div class="col-xs-9"><input type="email" placeholder="email@yourmail.com" class="form-control" name="tb_authen_email" value="<?=$memberOne[0]['tb_authen_email'] ?>"/></div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="form-group"><label class="col-sm-3 control-label">คำถาม</label>
-
-                          <div class="col-sm-9 controls">
-                              <div class="row">
-                                  <div class="col-xs-9"><input type="text" placeholder="คำถาม" class="form-control" name="tb_authen_username" value="" readonly/></div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="form-group"><label class="col-sm-3 control-label">Password</label>
-
-                          <div class="col-sm-9 controls">
-                              <div class="row">
-                                  <div class="col-xs-4"><input type="password" placeholder="password" class="form-control" name="tb_authen_password"  value="<?=$memberOne[0]['tb_authen_password'] ?>"/></div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="form-group"><label class="col-sm-3 control-label">Confirm Password</label>
-
-                          <div class="col-sm-9 controls">
-                              <div class="row">
-                                  <div class="col-xs-4"><input type="password" placeholder="password" class="form-control"/></div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="form-group"><label class="col-sm-3 control-label">ประเภทผู้ใช้งาน</label>
-
-                          <div class="col-sm-9 controls">
-                              <div class="row">
-                                  <div class="col-xs-4"><select class="form-control" name="tb_authen_usertype">
-                                      <option value="1">Admin</option>
-                                      <option value="2">Teacher</option>
-                                      <option value="3" selected>Student</option>
-                                  </select></div>
-                              </div>
-                          </div>
-                      </div> -->
 
                       <h3>กรอกข้อมูลคำถาม</h3>
                       <div class="form-group"><label class="col-sm-3 control-label">บทที่</label>
 
                           <div class="col-sm-9 controls">
                               <div class="row">
-                                  <div class="col-xs-4"><select class="form-control" name="tb_authen_usertype">
+                                  <div class="col-xs-4"><select class="form-control" name="tb_lessonID" required>
+                                      <option value="">NONE</option>
                                       <option value="1">บทที่ 1 เรื่อง สมบัติของจำนวนนับ</option>
                                       <option value="2">บทที่ 2 เรื่อง ระบบจำนวนเต็ม</option>
                                       <option value="3">บทที่ 3 เรื่องยกกำลัง</option>
@@ -97,42 +52,44 @@
 
                           <div class="col-sm-9 controls">
                               <div class="row">
-                                  <div class="col-xs-9"><input type="text" placeholder="คำถาม" class="form-control" name="tb_Quiz_title" value=""/></div>
+                                  <div class="col-xs-9"><input type="text" placeholder="คำถาม" class="form-control" name="tb_Quiz_title"  required></div>
                               </div>
                           </div>
                       </div>
                       <div class="form-group"><label class="col-sm-3 control-label">คำตอบที่1</label>
                           <div class="col-sm-9 controls">
                               <div class="row">
-                                  <div class="col-xs-9"><input type="text" placeholder="คำตอบที่1" class="form-control" name="tb_answer_title[]" value=""/></div>
+                                  <div class="col-xs-9"><input type="text" placeholder="คำตอบที่1" class="form-control" name="tb_answer_title[]"  required></div>
                               </div>
                           </div>
                       </div>
                       <div class="form-group"><label class="col-sm-3 control-label">คำตอบที่2</label>
                           <div class="col-sm-9 controls">
                               <div class="row">
-                                  <div class="col-xs-9"><input type="text" placeholder="คำตอบที่2" class="form-control" name="tb_answer_title[]" value=""/></div>
+                                  <div class="col-xs-9"><input type="text" placeholder="คำตอบที่2" class="form-control" name="tb_answer_title[]"  required></div>
                               </div>
                           </div>
                       </div>
                       <div class="form-group"><label class="col-sm-3 control-label">คำตอบที่3</label>
                           <div class="col-sm-9 controls">
                               <div class="row">
-                                  <div class="col-xs-9"><input type="text" placeholder="คำตอบที่3" class="form-control" name="tb_answer_title[]" value=""/></div>
+                                  <div class="col-xs-9"><input type="text" placeholder="คำตอบที่3" class="form-control" name="tb_answer_title[]"  required></div>
                               </div>
                           </div>
                       </div>
                       <div class="form-group"><label class="col-sm-3 control-label">คำตอบที่4</label>
                           <div class="col-sm-9 controls">
                               <div class="row">
-                                  <div class="col-xs-9"><input type="text" placeholder="คำตอบที่4" class="form-control" name="tb_answer_title[]" value=""/></div>
+                                  <div class="col-xs-9"><input type="text" placeholder="คำตอบที่4" class="form-control" name="tb_answer_title[]" value=""/ required></div>
                               </div>
                           </div>
                       </div>
                       <div class="form-group"><label class="col-sm-3 control-label">เลือกคำตอบข้อที่ถูกต้อง</label>
                           <div class="col-sm-9 controls">
                               <div class="row">
-                                  <div class="col-xs-4"><select class="form-control" name="tb_authen_usertype">
+                                  <div class="col-xs-4">
+                                    <select class="form-control" name="choice_Correct" required>
+                                      <option value="">NONE</option>
                                       <option value="1">คำตอบที่1</option>
                                       <option value="2">คำตอบที่2</option>
                                       <option value="3">คำตอบที่3</option>

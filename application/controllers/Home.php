@@ -13,9 +13,9 @@ class Home extends CI_Controller {
 			//echo "no data";
 		}
 		$this->load->view('backend/template/navigator');
-    $this->load->view($value['View']);
-    $this->load->view('backend/template/footer');
-  }
+		$this->load->view($value['View']);
+		$this->load->view('backend/template/footer');
+	}
 
 	public function index(){
 		// redirect('Home/productlist');
@@ -30,7 +30,7 @@ class Home extends CI_Controller {
 
 	public function cultural(){
 		// $this->load->view('backend/index');
-		 //$this->load->view('backend/index');
+		//$this->load->view('backend/index');
 		// $getCultural = $this->Culturalmodel->Cultural();
 		$value = array(
 			// 'Result' => array(
@@ -108,7 +108,7 @@ class Home extends CI_Controller {
 		$i= 0;
 		foreach ($getLessonDetail as $key) {
 			# code...
-			$result=$this->Culturalmodel->getAnswer($key['tb_Quiz_Number'],$id);
+			$result=$this->Culturalmodel->getAnswer($key['tb_Quiz_ID'],$id);
 			$getLessonDetail[$i]['getAnswer']=$result[0]['tb_answer_title'];
 			$i++;
 		}
@@ -123,28 +123,28 @@ class Home extends CI_Controller {
 	}
 
 	public function ckupload(){
-		 $image = 'assets/upload/files/'.time()."_".$_FILES['upload']['name']; // กำหนดชื่อไฟล์
-		 $url_img = base_url();
-		 if (($_FILES['upload'] == "none") OR (empty($_FILES['upload']['name']))){ // ตรวจสอบว่ามีข้อมูลถูกส่งมาหรือป่าว
-				 $error = "No file uploaded.";
-		 }else{
-				 if(!move_uploaded_file($_FILES['upload']['tmp_name'], $image)){
-				 $error = "Granted Read/Write/Modify permissions.";  // ตรวจสอบว่าโฟลเด้อที่จะบันทึกรูปสามารถเขียนได้หรือป่าว
-				 }
-		 }
-		 $callBack = $_GET['CKEditorFuncNum'] ; // ใช้งาน javascript callback function
-		 echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($callBack, '$url_img$image', '$error');</script>";
+		$image = 'assets/upload/files/'.time()."_".$_FILES['upload']['name']; // กำหนดชื่อไฟล์
+		$url_img = base_url();
+		if (($_FILES['upload'] == "none") OR (empty($_FILES['upload']['name']))){ // ตรวจสอบว่ามีข้อมูลถูกส่งมาหรือป่าว
+			$error = "No file uploaded.";
+		}else{
+			if(!move_uploaded_file($_FILES['upload']['tmp_name'], $image)){
+				$error = "Granted Read/Write/Modify permissions.";  // ตรวจสอบว่าโฟลเด้อที่จะบันทึกรูปสามารถเขียนได้หรือป่าว
+			}
 		}
+		$callBack = $_GET['CKEditorFuncNum'] ; // ใช้งาน javascript callback function
+		echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($callBack, '$url_img$image', '$error');</script>";
+	}
 
-		public function quiz_add(){
-			$value = array(
-				// 'Result' => array(
-				// 	'memberOne' => $memberOne
-				// ),
-				'View' => 'backend/quizadd'
-			);
-			$this->LoadPage($value);
-		}
+	public function quiz_add(){
+		$value = array(
+			// 'Result' => array(
+			// 	'memberOne' => $memberOne
+			// ),
+			'View' => 'backend/quizadd'
+		);
+		$this->LoadPage($value);
+	}
 
 
 

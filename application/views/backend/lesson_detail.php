@@ -30,7 +30,7 @@
                   <div class="panel panel-green">
                     <div class="panel-heading">
                       <?php
-                      $id = $this->uri->segment(3);
+                      $id = $this->uri->segment(3);   //lesson ID
                       switch ($id) {
                         case 1:
                         echo "บทที่ 1 เรื่อง สมบัติของจำนวนนับ";
@@ -58,20 +58,22 @@
                           </tr>
                         </thead>
                         <tbody>
+                          <?php $i=1; ?>
                           <?php foreach ($getLessonDetail as $ckey): ?>
                             <tr>
-                              <td width="5%"><?php echo $ckey['tb_Quiz_Number']; ?></td>
+                              <td width="5%"><?php echo $i; ?></td>
                               <td><?php echo $ckey['tb_Quiz_title']; ?></td>
                               <td><?php echo $ckey['getAnswer']; ?></td>
-                              <td width="20%">
-                                <button type="button" data-hover="tooltip" title="แก้ไข" class="btn btn-yellow" onclick="location.href='<?php echo site_url('Home/quiz_edit/'.$id.'/'.$ckey['tb_Quiz_Number']) ?>'" >
+                              <td width="5%">
+                                <!-- <button type="button" data-hover="tooltip" title="แก้ไข" class="btn btn-yellow" onclick="location.href='<?php echo site_url('Home/quiz_edit/'.$id.'/'.$ckey['tb_Quiz_ID']) ?>'" >
                                   <i class="fa fa-edit"></i>แก้ไข
-                                </button>
-                                <button type="button" data-hover="tooltip" title="ลบ" class="btn btn-orange" onclick="JavaScript:if(confirm('ต้องการลบ') == true){window.location='<?php echo site_url('Admin/Quiz_Delete/'.$ckey['tb_Quiz_ID']); ?>';}">
+                                </button> -->
+                                <button type="button" data-hover="tooltip" title="ลบ" class="btn btn-orange" onclick="JavaScript:if(confirm('ต้องการลบ') == true){window.location='<?php echo site_url('Admin/Quiz_Delete/'.$id.'/'.$ckey['tb_Quiz_ID']); ?>';}">
                                     <i class="fa fa-trash-o"></i>ลบ
                                 </button>
                               </td>
                             </tr>
+                          <?php $i++; ?>
                           <?php endforeach; ?>
 
                         </tbody>

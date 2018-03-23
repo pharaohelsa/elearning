@@ -37,27 +37,33 @@ class Frontpage extends CI_Controller {
   }
 
   public function pretest(){
-    // if(!isset($_SESSION["ADMIN_ID"])){
-    //   //messagebox
-    //   $value = array(
-    //     'View' => 'frontend/pretest'
-    //   );
-    // }else{
-    //   $value = array(
-    //     'View' => 'frontend/pretest'
-    //   );
+
+    // if (!empty($_SESSION["ADMIN_ID"])) {
+    //   # code...
+    //   $checklogin="errorlogin";
+    // }else {
+    //   # code...
+    //   $checklogin="success";
     // }
     $value = array(
+      // 'Result' => array(
+      // 	'checklogin' => $checklogin
+      // ),
       'View' => 'frontend/pretest'
     );
     $this->LoadPage($value);
+    // $value = array(
+    //   'View' => 'frontend/pretest'
+    // );
+    // $this->LoadPage($value);
   }
 
   public function score(){  //คะแนน
+    $getScorelist = $this->Culturalmodel->getScorelist();
     $value = array(
-      // 'Result' => array(
-      // 	'memberOne' => ''
-      // ),
+      'Result' => array(
+      	'getScorelist' => $getScorelist
+      ),
       'View' => 'frontend/score'
     );
     $this->LoadPage($value);
@@ -85,10 +91,13 @@ class Frontpage extends CI_Controller {
   }
 
   public function exam_post(){  //แบบทดสอบหลังเรียน
+    $id = $this->uri->segment(3); //lesson
+    $getExam = $this->Culturalmodel->M_exam($id);
+    $getAllAnswer = $this->Culturalmodel->getAllAnswer();
     $value = array(
-      // 'Result' => array(
-      // 	'memberOne' => ''
-      // ),
+      'Result' => array(
+        'getExam' => $getExam,'getAllAnswer' => $getAllAnswer
+      ),
       'View' => 'frontend/exam_post'
     );
     $this->LoadPage($value);
