@@ -19,6 +19,15 @@ class Adminmodel extends CI_Model
     $this->db->insert('tb_authen',$input);
   }
 
+  public function homeInsert($input){
+    //var_dump($input);
+    // $this->db->insert('tb_home',$input);
+    // $this->db->where('tb_home_id',$input['tb_home_id'])->update('tb_home');
+    $this->db
+		->where('tb_home_id',$input['tb_home_id'])
+		->update('tb_home',$input);
+  }
+
   public function memberEdit($input){
     $this->db
     ->where('tb_authen_ID',$input['tb_authen_ID'])
@@ -30,6 +39,12 @@ class Adminmodel extends CI_Model
     ->where('tb_authen_ID',$id)
     ->delete('tb_authen');
 	}
+
+  public function score_Del($id){
+    $this->db
+    ->where('tb_score_ID',$id)
+    ->delete('tb_score');
+  }
 
   public function ScoreInsert($input){
     //var_dump($input);

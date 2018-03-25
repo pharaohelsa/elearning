@@ -23,26 +23,30 @@
                             <div class="col-lg-12">
                                 <div class="panel">
                                     <div class="panel-body">
+                                      <?php
+                                      echo form_open('Admin/home_Insert');
+                                      ?>
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <h4 class="mbs">สาระการเรียนรู้</h4>
-                                                <textarea name="sara" id="sara" rows="10" cols="80"></textarea>
+                                                <textarea name="tb_home_sarakanrianroo" id="sara" rows="20" cols="80"><?=$gethome[0]['tb_home_sarakanrianroo'] ?></textarea>
                                                 <script>
                                                 	CKEDITOR.replace( 'sara' );
                                                 </script>
                                                 <h4 class="mbs">จุดประสงค์รายวิชา</h4>
-                                                <textarea name="chudprasong" id="chudprasong" rows="10" cols="80"></textarea>
+                                                <textarea name="tb_home_chudprasong" id="chudprasong" rows="20" cols="80"><?=$gethome[0]['tb_home_chudprasong'] ?></textarea>
                                                 <script>
                                                 	CKEDITOR.replace( 'chudprasong' );
                                                 </script>
-                                                
+
                                             </div>
                                             <!-- <div class="col-md-4">
 
                                             </div> -->
+                                            <input type="hidden" name="tb_home_id" value="<?php echo $gethome[0]['tb_home_id'] ?>">
                                               <button class="btn btn-primary btn-lg btn-block mb-3" type="submit">Submit form</button>
                                         </div>
-
+                                        <?php echo form_close(); ?>
                                     </div>
                                 </div>
                             </div>

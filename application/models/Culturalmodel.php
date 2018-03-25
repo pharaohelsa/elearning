@@ -36,10 +36,23 @@ class Culturalmodel extends CI_Model
     // ->where('tb_quiz.tb_lessonID',$id)
     // ->join('tb_answer','tb_quiz.tb_lessonID = tb_answer.tb_lessonID')
     // ->get('tb_quiz')
-    ->where('tb_lessonID',$id)
-    ->order_by('tb_Quiz_ID','asc')
+
+
+    ->where('tb_answer.tb_lessonID',$id)
+    ->where('tb_answer.tb_answer_CorrectStatus','Y')
+    ->join('tb_answer','tb_answer.tb_Quiz_ID = tb_quiz.tb_Quiz_ID','left')
+    ->order_by('tb_quiz.tb_Quiz_ID','asc')
     ->get('tb_quiz')
     ->result_array();
+
+    // $this->db->select('tb_Quiz_ID,tb_lessonID,tb_Quiz_title,tb_Quiz_Createdate,(select ())');
+    // $this->db->where('tb_lessonID',$id);
+    // $this->db->from('tb_quiz');
+    // // $this->db->join('member', 'tb_post.member_id = member.member_id','left');
+    // $this->db->order_by('tb_Quiz_ID','asc');
+    // $query = $this->db->get()->result_array();
+    // return $query;
+
   }
   public function getAnswer($choice,$lessonId){ //correct answer
     return $this->db
@@ -78,6 +91,12 @@ class Culturalmodel extends CI_Model
   public function getScorelist(){ //correct answer
     return $this->db
     ->get('tb_score')
+    ->result_array();
+  }
+
+  public function getHomepage(){ //correct answer
+    return $this->db
+    ->get('tb_home')
     ->result_array();
   }
 

@@ -9,8 +9,8 @@
         <h2>ลำดับคะแนน</h2>
       </div>
       <div class="row" style="margin:0 0 30px 10px;">
-        <div class="col-lg-12 mb-3">
-          <table id="example" class="table table-striped table-bordered" style="width:100%">
+      <div class="col-lg-12 mb-3">
+        <!-- <table id="example" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
                 <th>Name</th>
@@ -137,12 +137,12 @@
                 <th>Salary</th>
             </tr>
         </tfoot>
-    </table>
+        </table>
     <script>
     $(document).ready(function() {
         $('#example').DataTable();
     } );
-    </script>
+    </script> -->
           <!-- <ul class="list-group">
           <li class="list-group-item">antroneo <span>100</span></li>
           <li class="list-group-item">maximus <span>100</span></li>
@@ -150,22 +150,31 @@
           <li class="list-group-item">mo solah <span>100</span></li>
           <li class="list-group-item">hary kane <span>100</span></li>
         </ul> -->
-        <!-- <table class="table table-hover">
+        <table class="table table-hover">
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Name</th>
-              <th scope="col">score</th>
+              <th scope="col">ชื่อ</th>
+              <th scope="col">คะแนน</th>
+              <th scope="col">บทที่</th>
+              <th scope="col">แบบทดสอบ</th>
+
             </tr>
           </thead>
           <tbody>
+            <?php $i=1; ?>
+              <?php foreach ($getScorelist as $value) : ?>
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
+              <th scope="row"><?=$i?></th>
+              <td><?=$value['getFullname']?></td>
+              <td><?=$value['tb_score_total']?></td>
+              <td><?=$value['tb_lessonID']?></td>
+              <td><?=$value['prepost']?></td>
             </tr>
+          <?php $i++; ?>
+          <?php endforeach; ?>
           </tbody>
-        </table> -->
+        </table>
       </div>
 
 

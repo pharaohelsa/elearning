@@ -38,7 +38,14 @@ class Admin extends CI_Controller {
 
 		}
 		//exit();
-		redirect('Home/member');
+		redirect('Home/index');
+
+	}
+
+	public function home_Insert(){
+		$input = $this->input->post();
+		$this->Adminmodel->homeInsert($input);
+		redirect('Home');
 
 	}
 
@@ -46,6 +53,12 @@ class Admin extends CI_Controller {
 		$id = $this->uri->segment(3);
 		$this->Adminmodel->memberDel($id);
 		redirect('Home/member');
+	}
+
+	public function scoreDelete(){
+		$id = $this->uri->segment(3);
+		$this->Adminmodel->score_Del($id);
+		redirect('Home/score_list');
 	}
 	// public function adminEdit(){
 	// 	$input = $this->input->post();
@@ -68,7 +81,7 @@ class Admin extends CI_Controller {
 		$score=0;
 		for ($i=1; $i <= count($input["Radios"]) ; $i++) {
 			//print_r($input["Radios"][$i]."<br>"); //tb_answer_ID
-			if (!empty($this->Culturalmodel->getCheckAnswer($input["Radios"][$i]))) {
+			if (count($this->Culturalmodel->getCheckAnswer($input["Radios"][$i]))>0) {
 				$score++;
 			}
 		}
@@ -107,7 +120,7 @@ class Admin extends CI_Controller {
 			$choice_input['tb_answer_title'] = $input["tb_answer_title"][$i];
 			$choice_input['tb_Quiz_ID'] = $getQuizID;
 			$choice_input['tb_lessonID'] = $input["tb_lessonID"];
-			$choice_input['tb_answer_CreateBy'] = $_SESSION['ADMIN_ID'];
+			// $choice_input['tb_answer_CreateBy'] = $_SESSION['ADMIN_ID'];
 			if(($input['choice_Correct']-1)==$i){
 				$choice_input['tb_answer_CorrectStatus'] = 'Y';
 			}else{

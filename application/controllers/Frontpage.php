@@ -17,10 +17,11 @@ class Frontpage extends CI_Controller {
   }
 
   public function index(){
+    $getHomepage = $this->Culturalmodel->getHomepage();
     $value = array(
-      // 'Result' => array(
-      // 	'memberOne' => ''
-      // ),
+      'Result' => array(
+      	'getHomepage' => $getHomepage
+      ),
       'View' => 'frontend/index'
     );
     $this->LoadPage($value);
@@ -60,6 +61,12 @@ class Frontpage extends CI_Controller {
 
   public function score(){  //คะแนน
     $getScorelist = $this->Culturalmodel->getScorelist();
+    $i= 0;
+    foreach ($getScorelist as $key) {
+    	$result=$this->Culturalmodel->memberSelectOne($key['tb_score_userID']);
+    	$getScorelist[$i]['getFullname']=$result[0]['tb_authen_name'] ." ". $result[0]['tb_authen_lastname'];
+    	$i++;
+    }
     $value = array(
       'Result' => array(
       	'getScorelist' => $getScorelist

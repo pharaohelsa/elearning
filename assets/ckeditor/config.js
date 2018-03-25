@@ -8,5 +8,5 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
 	config.extraPlugins = 'image';
-	config.filebrowserUploadUrl = 'http://localhost/elearning/Home/ckupload';
+	config.filebrowserUploadUrl = 'https://localhost/elearning/Home/ckupload';
 };

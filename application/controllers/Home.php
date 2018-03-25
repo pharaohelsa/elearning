@@ -31,11 +31,12 @@ class Home extends CI_Controller {
 	public function cultural(){
 		// $this->load->view('backend/index');
 		//$this->load->view('backend/index');
-		// $getCultural = $this->Culturalmodel->Cultural();
+		$gethome = $this->Culturalmodel->getHomepage();
+		// print_r($gethome);
 		$value = array(
-			// 'Result' => array(
-			// 	'getCultural' => $getCultural
-			// ),
+			'Result' => array(
+				'gethome' => $gethome
+			),
 			'View' => 'backend/index'
 		);
 		$this->LoadPage($value);
@@ -101,17 +102,46 @@ class Home extends CI_Controller {
 		$this->LoadPage($value);
 	}
 
+
+	public function score_list(){
+		$getScorelist = $this->Culturalmodel->getScorelist();
+		$i= 0;
+		foreach ($getScorelist as $key) {
+			$result=$this->Culturalmodel->memberSelectOne($key['tb_score_userID']);
+			$getScorelist[$i]['getFullname']=$result[0]['tb_authen_name'] ." ". $result[0]['tb_authen_lastname'];
+			$i++;
+		}
+		$value = array(
+			'Result' => array(
+				'getScorelist' => $getScorelist
+			),
+			'View' => 'backend/score_list'
+		);
+		$this->LoadPage($value);
+	}
+
+
 	public function lesson_detail(){
 		$id = $this->uri->segment(3);		//lesson id
 		$getLessonDetail = $this->Culturalmodel->Lesson_select($id);
+
 		// start get answer
-		$i= 0;
-		foreach ($getLessonDetail as $key) {
-			# code...
-			$result=$this->Culturalmodel->getAnswer($key['tb_Quiz_ID'],$id);
-			$getLessonDetail[$i]['getAnswer']=$result[0]['tb_answer_title'];
-			$i++;
-		}
+		// $i= 0;
+		// foreach ($getLessonDetail as $key) {
+		// 	# code...
+		// 	$result=$this->Culturalmodel->getAnswer($key['tb_Quiz_ID'],$id);
+		// 	if(!empty($result[0]['tb_answer_title'])){
+		// 		$getLessonDetail[$i]['getAnswer']=$result[0]['tb_answer_title'];
+		// 		$i++;
+		// 	}
+		// 	// print_r($getLessonDetail[$i]['getAnswer']);
+		// 	// print_r('<br><br>');
+		// 	// print_r($result);
+		//
+		//
+		//
+		// }
+		// print_r(count($getLessonDetail););
 		//end get answer
 		$value = array(
 			'Result' => array(

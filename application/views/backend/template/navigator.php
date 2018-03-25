@@ -68,7 +68,7 @@
             </i><span class="menu-title">แบบทดสอบ</span></a>
 
             </li>
-            <li><a href="Tables.html"><i class="fa fa-edit fa-fw">
+            <li><a href="<?php echo site_url('Home/score_list'); ?>"><i class="fa fa-edit fa-fw">
                 <div class="icon-bg bg-blue"></div>
             </i><span class="menu-title">คะแนนแบบทดสอบ</span></a>
 

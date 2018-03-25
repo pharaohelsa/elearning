@@ -63,7 +63,7 @@
                             <tr>
                               <td width="5%"><?php echo $i; ?></td>
                               <td><?php echo $ckey['tb_Quiz_title']; ?></td>
-                              <td><?php echo $ckey['getAnswer']; ?></td>
+                              <td><?php echo $ckey['tb_answer_title']; ?></td>
                               <td width="5%">
                                 <!-- <button type="button" data-hover="tooltip" title="แก้ไข" class="btn btn-yellow" onclick="location.href='<?php echo site_url('Home/quiz_edit/'.$id.'/'.$ckey['tb_Quiz_ID']) ?>'" >
                                   <i class="fa fa-edit"></i>แก้ไข
