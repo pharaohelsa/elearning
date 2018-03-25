@@ -1,6 +1,6 @@
       <!-- FOOTER -->
       <footer class="container">
-        <p class="float-right"><a href="<?=base_url();?>#">Back to top</a></p>
+        <!-- <p class="float-right"><a href="<?=base_url();?>#">Back to top</a></p> -->
         <p>© 2017 E-learning system.</p>
       </footer>
 
