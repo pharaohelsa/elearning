@@ -42,6 +42,8 @@ class Admin extends CI_Controller {
 
 	}
 
+
+
 	public function home_Insert(){
 		$input = $this->input->post();
 		$this->Adminmodel->homeInsert($input);
@@ -131,6 +133,26 @@ class Admin extends CI_Controller {
 
 		redirect('Home/lesson_list');
 
+	}
+
+
+
+
+	public function lesson_delete(){
+		$lesson = $this->uri->segment(3);
+		$lesson_lesson = $this->uri->segment(4);
+		$this->Culturalmodel->lesson_delete($lesson_lesson);
+		redirect('Home/lesson_lesson_detail/'.$lesson);
+	}
+	public function lessonInsert(){
+		$input = $this->input->post();
+		$this->Culturalmodel->lessonInsert($input);
+		redirect('Home/lesson_lesson_detail/'.$input['tb_lesson_id']);
+	}
+	public function lessonEdit(){
+		$input = $this->input->post();
+		$this->Culturalmodel->lessonEdit($input);
+		redirect('Home/lesson_lesson_detail/'.$input['tb_lesson_id']);
 	}
 
 

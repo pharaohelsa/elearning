@@ -59,6 +59,42 @@ class Frontpage extends CI_Controller {
     // $this->LoadPage($value);
   }
 
+  public function lesson(){
+		$getLessonDetailList = $this->Culturalmodel->getLessonDetailList();
+		$value = array(
+			'Result' => array(
+				'getLessonDetailList' => $getLessonDetailList
+			),
+			'View' => 'frontend/lesson'
+		);
+		$this->LoadPage($value);
+		// print_r($getLessonDetailList);
+	}
+
+  public function lessonDetail(){
+    $id = $this->uri->segment(3);
+    $getLessonDetail = $this->Culturalmodel->lesson_lesson_detail($id);
+		$value = array(
+			'Result' => array(
+				'getLessonDetail' => $getLessonDetail
+			),
+			'View' => 'frontend/lessonDetail'
+		);
+		$this->LoadPage($value);
+  }
+  public function lessonlessonDetail(){
+    $id = $this->uri->segment(3);
+    $getLessonDetail = $this->Culturalmodel->lesson_detail_select($id);
+    $value = array(
+      'Result' => array(
+        'getLessonDetail' => $getLessonDetail
+      ),
+      'View' => 'frontend/lessonlessonDetail'
+    );
+    $this->LoadPage($value);
+  }
+
+
   public function score(){  //คะแนน
     $getScorelist = $this->Culturalmodel->getScorelist();
     $i= 0;

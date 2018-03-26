@@ -30,21 +30,23 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <?php
-            $active = $this->uri->segment(3);
+            $active = $this->uri->segment(2);
          ?>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item <?php if($active==""){ echo "active";} ?>">
               <a class="nav-link" href="<?php echo site_url('Frontpage'); ?>">หน้าแรก <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item  <?php if($active=="2"){ echo "active";} ?>">
-              <a class="nav-link" href="<?php echo site_url('Frontpage/pretest/2'); ?>">แบบทดสอบ</a>
+            <li class="nav-item  <?php if($active=="lesson" || $active=="lessonDetail" || $active=="lessonlessonDetail"){ echo "active";} ?>">
+              <a class="nav-link" href="<?php echo site_url('Frontpage/lesson/'); ?>">บทเรียน</a>
+            </li><li class="nav-item  <?php if($active=="pretest"){ echo "active";} ?>">
+              <a class="nav-link" href="<?php echo site_url('Frontpage/pretest/'); ?>">แบบทดสอบ</a>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link" href="#">แบบทดสอบหลังเรียน</a>
             </li> -->
-            <li class="nav-item <?php if($active=="3"){ echo "active";} ?>">
-              <a class="nav-link" href="<?php echo site_url('Frontpage/score/3'); ?>">ลำดับคะแนน</a>
+            <li class="nav-item <?php if($active=="score"){ echo "active";} ?>">
+              <a class="nav-link" href="<?php echo site_url('Frontpage/score/'); ?>">ลำดับคะแนน</a>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link disabled" href="http://getbootstrap.com/docs/4.0/examples/carousel/#">Disabled</a>
@@ -52,8 +54,8 @@
             <!-- <li class="nav-item">
               <a class="nav-link" href="<?php echo site_url('Home/login'); ?>">เข้าสู่ระบบ</a>
             </li> -->
-            <li class="nav-item <?php if($active=="4"){ echo "active";} ?>">
-              <a class="nav-link" href="<?php echo site_url('Frontpage/register/4'); ?>">สมัครสมาชิก</a>
+            <li class="nav-item <?php if($active=="register"){ echo "active";} ?>">
+              <a class="nav-link" href="<?php echo site_url('Frontpage/register/'); ?>">สมัครสมาชิก</a>
             </li>
           </ul>
           <?php

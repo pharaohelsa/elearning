@@ -17,6 +17,45 @@ class Culturalmodel extends CI_Model
   //   ->result_array();
 	// }
 
+public function getLessonDetailList(){
+  return
+  $this->db
+  ->order_by('tb_lesson_number','asc')
+  ->get('tb_lesson')
+  ->result_array();
+}
+
+public function lessonInsert($input){
+  $this->db->insert('tb_lesson_detail',$input);
+
+}
+public function lessonEdit($input){
+  $this->db
+  ->where('tb_lesson_detail_id',$input['tb_lesson_detail_id'])
+  ->update('tb_lesson_detail',$input);
+}
+
+
+
+public function lesson_detail_select($id){
+  return $this->db
+  ->where('tb_lesson_detail_id',$id)
+  ->get('tb_lesson_detail')
+  ->result_array();
+}
+public function lesson_delete($id){
+  $this->db
+  ->where('tb_lesson_detail_id',$id)
+  ->delete('tb_lesson_detail');
+}
+public function lesson_lesson_detail($id){
+  return
+  $this->db
+  ->where('tb_lesson_id',$id)
+  ->order_by('tb_lesson_detail_order','asc')
+  ->get('tb_lesson_detail')
+  ->result_array();
+}
   public function member(){
     return
     $this->db

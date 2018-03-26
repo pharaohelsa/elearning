@@ -46,7 +46,7 @@
 
                           <div class="col-sm-9 controls">
                               <div class="row">
-                                  <div class="col-xs-9"><input type="text" placeholder="username" class="form-control" name="tb_authen_username" value="<?=$memberOne[0]['tb_authen_username'] ?>" <? if(!empty($memberOne[0]['tb_authen_username'])){ echo 'readonly';} ?>/></div>
+                                  <div class="col-xs-9"><input type="text" placeholder="username" class="form-control" name="tb_authen_username" value="<?=$memberOne[0]['tb_authen_username'] ?>" <?php if(!empty($memberOne[0]['tb_authen_username'])){ echo 'readonly';} ?>></div>
                               </div>
                           </div>
                       </div>

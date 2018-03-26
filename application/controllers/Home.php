@@ -102,6 +102,42 @@ class Home extends CI_Controller {
 		$this->LoadPage($value);
 	}
 
+	public function lesson_add(){
+		$tb_lesson_id = $this->uri->segment(3);
+		$value = array(
+			'Result' => array(
+				'tb_lesson_id' => $tb_lesson_id
+			),
+			'View' => 'backend/lesson_add'
+		);
+		$this->LoadPage($value);
+	}
+
+	public function lesson_detail_list(){
+		$getLessonDetailList = $this->Culturalmodel->getLessonDetailList();
+		$value = array(
+			'Result' => array(
+				'getLessonDetailList' => $getLessonDetailList
+			),
+			'View' => 'backend/lesson_detail_list'
+		);
+		$this->LoadPage($value);
+		// print_r($getLessonDetailList);
+	}
+
+	public function lesson_lesson_detail(){
+		$id = $this->uri->segment(3);
+		$getLessonLessonDetailList = $this->Culturalmodel->lesson_lesson_detail($id);
+		$value = array(
+			'Result' => array(
+				'getLessonLessonDetailList' => $getLessonLessonDetailList
+			),
+			'View' => 'backend/lesson_detail_lesson'
+		);
+		$this->LoadPage($value);
+	}
+
+
 
 	public function score_list(){
 		$getScorelist = $this->Culturalmodel->getScorelist();
@@ -175,6 +211,30 @@ class Home extends CI_Controller {
 		);
 		$this->LoadPage($value);
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+	public function lesson_edit_form(){
+		$lesson_lesson_id = $this->uri->segment(3);
+		$lesson = $this->Culturalmodel->lesson_detail_select($lesson_lesson_id);
+		$value = array(
+			'Result' => array(
+				'lesson' => $lesson
+			),
+			'View' => 'backend/lesson_edit_form'
+		);
+		$this->LoadPage($value);
+	}
+
 
 
 

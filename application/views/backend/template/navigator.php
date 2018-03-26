@@ -63,6 +63,11 @@
             </i><span class="menu-title">บทเรียน</span></a>
 
             </li> -->
+            <li><a href="<?php echo site_url('Home/lesson_detail_list'); ?>"><i class="fa fa-file fa-fw">
+                <div class="icon-bg bg-violet"></div>
+            </i><span class="menu-title">เนื้อหา</span></a>
+
+            </li>
             <li><a href="<?php echo site_url('Home/lesson_list'); ?>"><i class="fa fa-edit fa-fw">
                 <div class="icon-bg bg-violet"></div>
             </i><span class="menu-title">แบบทดสอบ</span></a>

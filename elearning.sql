@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 23, 2018 at 06:03 PM
+-- Generation Time: Mar 26, 2018 at 06:10 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -155,29 +155,65 @@ INSERT INTO `tb_authen` (`tb_authen_ID`, `tb_authen_usertype`, `tb_authen_userna
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_course`
---
-
-CREATE TABLE `tb_course` (
-  `tb_course_ID` int(11) NOT NULL,
-  `tb_course_name` varchar(100) NOT NULL,
-  `tb_course_description` text NOT NULL COMMENT 'คำอธิบายรายวิชา',
-  `tb_course_purpose` text NOT NULL COMMENT 'จุดประสงค์',
-  `tb_course_Createdate` datetime NOT NULL,
-  `tb_course_UpdateDate` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tb_home`
 --
 
 CREATE TABLE `tb_home` (
+  `tb_home_id` int(11) NOT NULL,
   `tb_home_sarakanrianroo` text NOT NULL,
   `tb_home_chudprasong` text NOT NULL,
   `tb_home_banner` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tb_home`
+--
+
+INSERT INTO `tb_home` (`tb_home_id`, `tb_home_sarakanrianroo`, `tb_home_chudprasong`, `tb_home_banner`) VALUES
+(0, '<p>01111000000</p>\r\n', '<p>0kjlkjlk</p>\r\n', '0');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_lesson`
+--
+
+CREATE TABLE `tb_lesson` (
+  `tb_lesson_id` int(11) NOT NULL,
+  `tb_lesson_number` int(11) NOT NULL,
+  `tb_lesson_name` varchar(500) CHARACTER SET utf8 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_lesson`
+--
+
+INSERT INTO `tb_lesson` (`tb_lesson_id`, `tb_lesson_number`, `tb_lesson_name`) VALUES
+(1, 1, 'ทศนิยมและเศษส่วน'),
+(2, 2, 'ระบบจำนวนเต็ม'),
+(3, 3, 'พื้นฐานทางเรขาคณิต');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_lesson_detail`
+--
+
+CREATE TABLE `tb_lesson_detail` (
+  `tb_lesson_detail_id` int(11) NOT NULL,
+  `tb_lesson_id` int(11) NOT NULL,
+  `tb_lesson_detail_name` varchar(500) CHARACTER SET utf8 NOT NULL,
+  `tb_lesson_detail_lesson` varchar(10000) CHARACTER SET utf8 NOT NULL,
+  `tb_lesson_detail_order` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_lesson_detail`
+--
+
+INSERT INTO `tb_lesson_detail` (`tb_lesson_detail_id`, `tb_lesson_id`, `tb_lesson_detail_name`, `tb_lesson_detail_lesson`, `tb_lesson_detail_order`) VALUES
+(2, 1, 'AAAAAAAAAA', '<p>AAAAAAAAAAAAAAAAAAA</p>\r\n', 2),
+(3, 1, 'DDDDDDDDDD++++', '<p>EDDDDDDD+++++</p>\r\n', 1);
 
 -- --------------------------------------------------------
 
@@ -216,6 +252,7 @@ INSERT INTO `tb_quiz` (`tb_Quiz_ID`, `tb_lessonID`, `tb_Quiz_title`, `tb_Quiz_Cr
 CREATE TABLE `tb_score` (
   `tb_score_ID` int(11) NOT NULL,
   `tb_lessonID` int(11) NOT NULL,
+  `prepost` varchar(50) NOT NULL,
   `tb_score_total` int(11) NOT NULL,
   `tb_score_userID` int(11) NOT NULL,
   `tb_score_createdate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -225,8 +262,11 @@ CREATE TABLE `tb_score` (
 -- Dumping data for table `tb_score`
 --
 
-INSERT INTO `tb_score` (`tb_score_ID`, `tb_lessonID`, `tb_score_total`, `tb_score_userID`, `tb_score_createdate`) VALUES
-(17, 1, 3, 1, '2018-03-22 22:16:36');
+INSERT INTO `tb_score` (`tb_score_ID`, `tb_lessonID`, `prepost`, `tb_score_total`, `tb_score_userID`, `tb_score_createdate`) VALUES
+(17, 1, '', 3, 1, '2018-03-22 22:16:36'),
+(18, 1, 'แบบทดสอบก่อนเรียน', 2, 1, '2018-03-25 01:21:39'),
+(19, 1, 'แบบทดสอบก่อนเรียน', 2, 1, '2018-03-25 01:21:39'),
+(20, 1, 'แบบทดสอบหลังเรียน', 2, 1, '2018-03-25 01:22:07');
 
 --
 -- Indexes for dumped tables
@@ -243,6 +283,24 @@ ALTER TABLE `tb_answer`
 --
 ALTER TABLE `tb_authen`
   ADD PRIMARY KEY (`tb_authen_ID`);
+
+--
+-- Indexes for table `tb_home`
+--
+ALTER TABLE `tb_home`
+  ADD PRIMARY KEY (`tb_home_id`);
+
+--
+-- Indexes for table `tb_lesson`
+--
+ALTER TABLE `tb_lesson`
+  ADD PRIMARY KEY (`tb_lesson_id`);
+
+--
+-- Indexes for table `tb_lesson_detail`
+--
+ALTER TABLE `tb_lesson_detail`
+  ADD PRIMARY KEY (`tb_lesson_detail_id`);
 
 --
 -- Indexes for table `tb_quiz`
@@ -264,22 +322,32 @@ ALTER TABLE `tb_score`
 -- AUTO_INCREMENT for table `tb_answer`
 --
 ALTER TABLE `tb_answer`
-  MODIFY `tb_answer_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
+  MODIFY `tb_answer_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 --
 -- AUTO_INCREMENT for table `tb_authen`
 --
 ALTER TABLE `tb_authen`
-  MODIFY `tb_authen_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `tb_authen_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `tb_lesson`
+--
+ALTER TABLE `tb_lesson`
+  MODIFY `tb_lesson_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `tb_lesson_detail`
+--
+ALTER TABLE `tb_lesson_detail`
+  MODIFY `tb_lesson_detail_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tb_quiz`
 --
 ALTER TABLE `tb_quiz`
-  MODIFY `tb_Quiz_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `tb_Quiz_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `tb_score`
 --
 ALTER TABLE `tb_score`
-  MODIFY `tb_score_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `tb_score_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
