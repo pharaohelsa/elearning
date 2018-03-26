@@ -46,10 +46,11 @@ class Frontpage extends CI_Controller {
     //   # code...
     //   $checklogin="success";
     // }
+    $getLessonDetailList = $this->Culturalmodel->getLessonDetailList();
     $value = array(
-      // 'Result' => array(
-      // 	'checklogin' => $checklogin
-      // ),
+      'Result' => array(
+      	'getLessonDetailList' => $getLessonDetailList
+      ),
       'View' => 'frontend/pretest'
     );
     $this->LoadPage($value);
