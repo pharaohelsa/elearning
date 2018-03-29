@@ -30,8 +30,8 @@
               <?php foreach ($getLessonDetailList as $key): ?>
                 <li class="list-group-item">
                   <?php echo 'บทที่ '.$key['tb_lesson_number'].' เรื่อง'.$key['tb_lesson_name'] ?>
-                  <a class="btn btn-secondary <?=$readonly?>" href="<?php echo site_url('Frontpage/exam_pre/'.$key['tb_lesson_id']); ?>" role="button" style="margin-left:5em;">แบบทดสอบก่อนเรียน</a>
-                  <a class="btn btn-primary <?=$readonly?>" href="<?php echo site_url('Frontpage/exam_post/'.$key['tb_lesson_id']); ?>" role="button">แบบทดสอบหลังเรียน</a>
+                  <span class="pull-right" style="padding-right:50px;" ><a class="btn btn-secondary <?=$readonly?>" href="<?php echo site_url('Frontpage/exam_pre/'.$key['tb_lesson_id']); ?>" role="button" style="margin-left:5em;">แบบทดสอบก่อนเรียน</a>
+                  <a class="btn btn-primary <?=$readonly?>" href="<?php echo site_url('Frontpage/exam_post/'.$key['tb_lesson_id']); ?>" role="button">แบบทดสอบหลังเรียน</a></span>
                 </li>
               <?php endforeach; ?>
               <!-- <li class="list-group-item">บทที่ 1 เรื่อง สมบัติของจำนวนนับ

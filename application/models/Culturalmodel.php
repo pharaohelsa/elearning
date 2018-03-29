@@ -39,8 +39,12 @@ public function lessonEdit($input){
 
 public function lesson_detail_select($id){
   return $this->db
-  ->where('tb_lesson_detail_id',$id)
-  ->get('tb_lesson_detail')
+  ->where('tb_lesson_detail.tb_lesson_detail_id',$id)
+  ->join('tb_lesson','tb_lesson.tb_lesson_id = tb_lesson_detail.tb_lesson_id')
+  ->get('tb_lesson_detail','tb_lesson')
+  // ->where('tb_lesson_detail_id',$id)
+  // ->join('tb_lesson','tb_lesson.tb_lesson_id = tb_lesson_detail.tb_lesson_id')
+  // ->get('tb_lesson_detail')
   ->result_array();
 }
 public function lesson_delete($id){

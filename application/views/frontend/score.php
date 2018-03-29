@@ -153,7 +153,7 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th scope="col">#</th>
+              <th scope="col">ลำดับ</th>
               <th scope="col">ชื่อ</th>
               <th scope="col">คะแนน</th>
               <th scope="col">บทที่</th>

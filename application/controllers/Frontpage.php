@@ -61,15 +61,28 @@ class Frontpage extends CI_Controller {
   }
 
   public function lesson(){
-		$getLessonDetailList = $this->Culturalmodel->getLessonDetailList();
-		$value = array(
-			'Result' => array(
-				'getLessonDetailList' => $getLessonDetailList
-			),
-			'View' => 'frontend/lesson'
-		);
-		$this->LoadPage($value);
-		// print_r($getLessonDetailList);
+    $getLessonDetailList = $this->Culturalmodel->getLessonDetailList();
+      for ($i=0; $i < count($getLessonDetailList); $i++) {
+        $getLessonDetailList[$i]['tb_lesson_detail_name'] = $this->Culturalmodel->lesson_lesson_detail($getLessonDetailList[$i]['tb_lesson_id']);
+      }
+    //print_r($getLessonDetailList);
+    $value = array(
+      'Result' => array(
+        'getLessonDetailList' => $getLessonDetailList
+      ),
+      'View' => 'frontend/lesson'
+    );
+   $this->LoadPage($value);
+  //	print_r($getLessonDetailList[0]['tb_lesson_id']);
+		// $getLessonDetailList = $this->Culturalmodel->getLessonDetailList();
+		// $value = array(
+		// 	'Result' => array(
+		// 		'getLessonDetailList' => $getLessonDetailList
+		// 	),
+		// 	'View' => 'frontend/lesson'
+		// );
+		// $this->LoadPage($value);
+	//	print_r($getLessonDetailList[0]['tb_lesson_id']);
 	}
 
   public function lessonDetail(){
@@ -86,6 +99,8 @@ class Frontpage extends CI_Controller {
   public function lessonlessonDetail(){
     $id = $this->uri->segment(3);
     $getLessonDetail = $this->Culturalmodel->lesson_detail_select($id);
+    // print_r($getLessonDetail);
+
     $value = array(
       'Result' => array(
         'getLessonDetail' => $getLessonDetail

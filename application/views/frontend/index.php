@@ -87,7 +87,7 @@
 
 <!-- START THE FEATURETTES -->
 
-<hr class="featurette-divider">
+<!-- <hr class="featurette-divider"> -->
 <div class="row">
   <div class="col-lg-12">
     <h2>จุดประสงค์การเรียนรู้</h2>

@@ -10,13 +10,13 @@
         </div>
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label for="exampleInputEmail1">Username</label>
+            <label for="exampleInputEmail1">Username</label><span style="color:red"> * </span>
             <input type="text" class="form-control" name="tb_authen_username" placeholder="Username" required>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label for="exampleInputEmail1">Password</label>
+            <label for="exampleInputEmail1">Password</label><span style="color:red"> * </span>
             <input type="text" class="form-control" name="tb_authen_password" placeholder="Password" required>
           </div>
         </div>
@@ -28,17 +28,17 @@
         </div> -->
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label for="validationCustom01">ชื่อ</label>
+            <label for="validationCustom01">ชื่อ</label><span style="color:red"> * </span>
             <input type="text" class="form-control" name="tb_authen_name" placeholder="First name" value="" required>
           </div>
           <div class="col-md-6 mb-3">
-            <label for="validationCustom02">สกุล</label>
+            <label for="validationCustom02">สกุล</label><span style="color:red"> * </span>
             <input type="text" class="form-control" name="tb_authen_lastname" placeholder="Last name" value="" required>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label class="">ประเภทผู้ใช้งาน</label>
+            <label class="">ประเภทผู้ใช้งาน</label><span style="color:red"> * </span>
                   <div class="col-xs-4"><select class="form-control" name="tb_authen_usertype">
                       <option value="2">Teacher</option>
                       <option value="3" selected>Student</option>
@@ -47,7 +47,7 @@
 
           </div>
           <div class="col-md-6 mb-3">
-            <label class="">เพศ</label><br>
+            <label class="">เพศ</label><span style="color:red"> * </span><br>
             <label class="form-check-label">
               <input class="form-check-input" name="tb_authen_sex" type="radio" value="M" checked>
               ชาย
@@ -63,7 +63,7 @@
 
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label for="exampleInputEmail1">Email address</label>
+            <label for="exampleInputEmail1">Email address</label><span style="color:red"> * </span>
             <input type="email" class="form-control" name="tb_authen_email" aria-describedby="emailHelp" placeholder="email@yourmail.com" required>
           </div>
         </div>
