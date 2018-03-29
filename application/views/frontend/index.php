@@ -12,11 +12,11 @@
     <div class="carousel-item active">
       <!-- <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide"> -->
 
-      <img class="first-slide" src="<?php echo base_url(); ?>assets/img/mathematics.jpg" alt="E-learning">
+      <img class="first-slide" src="<?php echo base_url(); ?>assets/img/math1.gif" alt="E-learning">
       <div class="container">
         <div class="carousel-caption text-left">
           <h1 style="color:black;">ระบบ Elearning วิชาคณิตศาสตร์</h1>
-          <p>ระดับชั้นมัธยมศึกษาปีที่ 1</p>
+          <p style="color:black;">ระดับชั้นมัธยมศึกษาปีที่ 1</p>
           <!-- <p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com/docs/4.0/examples/carousel/#" role="button">Sign up today</a></p> -->
         </div>
       </div>
