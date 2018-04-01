@@ -6,7 +6,7 @@
       <form class="container" action="" method="post" id="needs-validation" novalidate>
         <br>
         <div class="jumbotron" >
-        <h2>บทเรียน</h2>
+        <h2>บทเรียนคณิตศาสตร์ชั้นมัธยมศึกษาปีที่ 1</h2>
         </div>
 
         <div class="row" style="margin:0 0 30px 10px;">

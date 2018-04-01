@@ -41,8 +41,8 @@
                     <?php if (($value['tb_Quiz_ID']==$ckey['tb_Quiz_ID']) &&($value['tb_lessonID']==$ckey['tb_lessonID']) ){ ?>
                       <!-- <div style="margin-left:20px;"><?php echo $value['tb_answer_title'] ?></div> -->
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Radios[<?=$ckey['tb_Quiz_ID']?>]" value="<?=$value['tb_answer_ID']?>" required>
-                        <label class="form-check-label" for="Radios[<?=$ckey['tb_Quiz_ID']?>]">
+                        <input class="form-check-input" type="radio" name="Radios[<?=$i ?>]" value="<?=$value['tb_answer_ID']?>" required>
+                        <label class="form-check-label" for="Radios[<?=$i ?>]">
                           <?php echo $value['tb_answer_title'] ?>
                         </label>
                       </div>

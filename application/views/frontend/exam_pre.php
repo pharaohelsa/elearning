@@ -33,16 +33,17 @@
             <?php  foreach ($getExam as $ckey): ?>
               <li class="list-group-item">
                 <div class="col-lg-12 mb-3">
-                  <span>ข้อ<?php echo $i ?></span>
+                  <span>ข้อ <?php echo $i ?></span>
                   <span><?php echo $ckey['tb_Quiz_title'] ?></span>
                 </div>
                 <div class="col-lg-12 mb-3">
+
                   <?php foreach ($getAllAnswer as $value) : ?>
                     <?php if (($value['tb_Quiz_ID']==$ckey['tb_Quiz_ID']) &&($value['tb_lessonID']==$ckey['tb_lessonID']) ){ ?>
                     <!-- <div style="margin-left:20px;"><?php echo $value['tb_answer_title'] ?></div> -->
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="Radios[<?=$ckey['tb_Quiz_ID']?>]" value="<?=$value['tb_answer_ID']?>" required>
-                      <label class="form-check-label" for="Radios[<?=$ckey['tb_Quiz_ID']?>]">
+                      <input class="form-check-input" type="radio" name="Radios[<?=$i ?>]" value="<?=$value['tb_answer_ID']?>" required>
+                      <label class="form-check-label" for="Radios[<?=$i ?>]">
                         <?php echo $value['tb_answer_title'] ?>
                       </label>
                     </div>

@@ -77,17 +77,17 @@ class Admin extends CI_Controller {
 
 	public function submitExam(){
 		$input = $this->input->post();
-		// print_r($input);
-		//var_dump($input);
-		//echo count($input["Radios"]);
+		print_r($input);
+
 		$score=0;
 		for ($i=1; $i <= count($input["Radios"]) ; $i++) {
-			//print_r($input["Radios"][$i]."<br>"); //tb_answer_ID
 			if (count($this->Culturalmodel->getCheckAnswer($input["Radios"][$i]))>0) {
 				$score++;
 			}
 		}
-		//print_r($score);
+
+
+		print_r($score);
 		$insertData['prepost']=$input['prepost']; //pretest/posttest
 		$insertData['tb_lessonID']=$input['tb_lessonID'];
 		$insertData['tb_score_total']=$score;
