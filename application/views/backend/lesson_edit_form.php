@@ -8,7 +8,7 @@
                 เพิ่มข้อมูลเนื้อหา</div>
         </div>
         <ol class="breadcrumb page-breadcrumb pull-right">
-            <li><i class="fa fa-home"></i>&nbsp;<a href="<?php echo site_url('Home'); ?>">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+            <li><i class="fa fa-home"></i>&nbsp;<a href="<?php echo site_url('Home'); ?>">หน้าแรก</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
             <li class="hidden"><a href="#">Lesson</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
             <li><a href="<?php echo site_url('Home/lesson_detail_list'); ?>">จัดการเนื้อหา</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
             <li class="active">เพิ่มข้อมูลเนื้อหา</li>
@@ -66,7 +66,7 @@
                       <hr/>
                       <input type="hidden" name="tb_lesson_id" value="<?php echo $lesson[0]['tb_lesson_id'] ?>">
                       <input type="hidden" name="tb_lesson_detail_id" value="<?php echo $lesson[0]['tb_lesson_detail_id'] ?>">
-                      <button type="submit" class="btn btn-green btn-block">Finish</button>
+                      <button type="submit" class="btn btn-green btn-block">บันทึก</button>
                       <?php echo form_close(); ?>
                   <!-- </form> -->
               </div>

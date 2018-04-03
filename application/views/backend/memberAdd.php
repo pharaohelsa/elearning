@@ -7,8 +7,8 @@
                 เพิ่มข้อมูลผู้ใช้งาน</div>
         </div>
         <ol class="breadcrumb page-breadcrumb pull-right">
-            <li><i class="fa fa-home"></i>&nbsp;<a href="<?php echo site_url('Home'); ?>">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-            <li class="hidden"><a href="#">Member</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+            <li><i class="fa fa-home"></i>&nbsp;<a href="<?php echo site_url('Home'); ?>">หน้าแรก</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+            <li class="hidden"><a href="#">สมาชิก</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
             <li><a href="<?php echo site_url('Home/member'); ?>">จัดการผู้ใช้งาน</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
             <li class="active">เพิ่มข้อมูลผู้ใช้งาน</li>
         </ol>
@@ -34,7 +34,7 @@
                     ?>
                     <h3>Account Setting</h3>
 
-                      <div class="form-group"><label class="col-sm-3 control-label">Email</label>
+                      <div class="form-group"><label class="col-sm-3 control-label">อีเมล</label>
 
                           <div class="col-sm-9 controls">
                               <div class="row">
@@ -42,7 +42,7 @@
                               </div>
                           </div>
                       </div>
-                      <div class="form-group"><label class="col-sm-3 control-label">Username</label>
+                      <div class="form-group"><label class="col-sm-3 control-label">ชื่อผู้ใช้</label>
 
                           <div class="col-sm-9 controls">
                               <div class="row">
@@ -50,7 +50,7 @@
                               </div>
                           </div>
                       </div>
-                      <div class="form-group"><label class="col-sm-3 control-label">Password</label>
+                      <div class="form-group"><label class="col-sm-3 control-label">รหัสผ่าน</label>
 
                           <div class="col-sm-9 controls">
                               <div class="row">
@@ -58,7 +58,7 @@
                               </div>
                           </div>
                       </div>
-                      <div class="form-group"><label class="col-sm-3 control-label">Confirm Password</label>
+                      <div class="form-group"><label class="col-sm-3 control-label">ยืนยันรหัสผ่าน</label>
 
                           <div class="col-sm-9 controls">
                               <div class="row">
@@ -71,9 +71,9 @@
                           <div class="col-sm-9 controls">
                               <div class="row">
                                   <div class="col-xs-4"><select class="form-control" name="tb_authen_usertype">
-                                      <option value="1">Admin</option>
-                                      <option value="2">Teacher</option>
-                                      <option value="3" selected>Student</option>
+                                      <option value="1">ผู้ดูแล</option>
+                                      <option value="2">อาจารย์</option>
+                                      <option value="3" selected>นักเรียน</option>
                                   </select></div>
                               </div>
                           </div>
@@ -119,7 +119,7 @@
 
                       <hr/>
                       <input type="hidden" name="tb_authen_ID" value="<?=$memberOne[0]['tb_authen_ID'] ?>">
-                      <button type="submit" class="btn btn-green btn-block">Finish</button>
+                      <button type="submit" class="btn btn-green btn-block">บันทึก</button>
                       <?php echo form_close(); ?>
                   <!-- </form> -->
               </div>

@@ -44,7 +44,7 @@
 
                                             </div> -->
                                             <input type="hidden" name="tb_home_id" value="<?php echo $gethome[0]['tb_home_id'] ?>">
-                                              <button class="btn btn-primary btn-lg btn-block mb-3" type="submit">Submit form</button>
+                                              <button class="btn btn-primary btn-lg btn-block mb-3" type="submit">บันทึก</button>
                                         </div>
                                         <?php echo form_close(); ?>
                                     </div>

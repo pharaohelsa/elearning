@@ -1,11 +1,10 @@
-<main role="main">
-  <div class="container">
-    <div class="carousel-caption" style="padding-bottom:25% !important">
+<main role="main" id="top">
+  <!-- <div class="container">
+    <div class="carousel-caption" style="padding-bottom:18% !important">
       <h1 style="color:black;">บทเรียน Elearning วิชาคณิตศาสตร์</h1>
       <p style="color:black;">ระดับชั้นมัธยมศึกษาปีที่ 1</p>
-      <!-- <p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com/docs/4.0/examples/carousel/#" role="button">Sign up today</a></p> -->
     </div>
-  </div>
+  </div> -->
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -16,8 +15,13 @@
     <div class="carousel-item active">
       <!-- <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide"> -->
 
-      <img class="first-slide" src="<?php echo base_url(); ?>assets/img/math1.gif" alt="E-learning">
-
+      <img src="<?php echo base_url(); ?>assets/img/math1.gif" alt="E-learning">
+      <!-- <div class="container" style="margin:0px">
+        <div class="carousel-caption">
+          <h1 style="color:black;">บทเรียน Elearning วิชาคณิตศาสตร์</h1>
+          <p style="color:black;">ระดับชั้นมัธยมศึกษาปีที่ 1</p>
+        </div>
+      </div> -->
     </div>
     <!-- <div class="carousel-item">
     <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
@@ -40,6 +44,14 @@
 </div>
 </div> -->
 </div>
+
+<div class="row btn-info" style="align:ecnter;text-align:center">
+  <div class="col-lg-12">
+    <h1 style="color:black;">บทเรียน Elearning วิชาคณิตศาสตร์</h1>
+    <h3 style="color:black;">ระดับชั้นมัธยมศึกษาปีที่ 1</h3>
+  </div>
+</div>
+
 <!-- <a class="carousel-control-prev" href="http://getbootstrap.com/docs/4.0/examples/carousel/#myCarousel" role="button" data-slide="prev">
 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 <span class="sr-only">Previous</span>
@@ -97,6 +109,9 @@
     <p><a class="btn btn-secondary" href="http://getbootstrap.com/docs/4.0/examples/carousel/#" role="button">View details »</a></p> -->
   </div>
 </div>
+<a href="#top" class="btn btn-info btn-lg" style="float:right">
+          <span class="glyphicon glyphicon-arrow-up"></span> ขึ้นไปด้านบน
+        </a>
 <!-- <div class="row featurette">
 <div class="col-md-7">
 <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>

@@ -7,8 +7,8 @@
                 เพิ่มข้อสอบ</div>
         </div>
         <ol class="breadcrumb page-breadcrumb pull-right">
-            <li><i class="fa fa-home"></i>&nbsp;<a href="<?php echo site_url('Home'); ?>">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-            <li class="hidden"><a href="#">Member</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+            <li><i class="fa fa-home"></i>&nbsp;<a href="<?php echo site_url('Home'); ?>">หน้าแรก</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+            <li class="hidden"><a href="#">แบบทดสอบ</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
             <li><a href="<?php echo site_url('Home/lesson_list'); ?>">รายการแบบทดสอบ</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
             <li class="active">เพิ่มข้อสอบ</li>
         </ol>
@@ -113,7 +113,7 @@
 
                       <hr/>
                       <!-- <input type="hidden" name="tb_authen_ID" value="<?=$memberOne[0]['tb_authen_ID'] ?>"> -->
-                      <button type="submit" class="btn btn-green btn-block">Finish</button>
+                      <button type="submit" class="btn btn-green btn-block">บันทึก</button>
                       <?php echo form_close(); ?>
                   <!-- </form> -->
               </div>

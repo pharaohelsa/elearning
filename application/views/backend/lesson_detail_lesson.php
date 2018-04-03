@@ -7,7 +7,7 @@
       <div class="page-title">เนื้อหา</div>
     </div>
     <ol class="breadcrumb page-breadcrumb pull-right">
-      <li><i class="fa fa-home"></i>&nbsp;<a href="<?php echo site_url('Home'); ?>">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+      <li><i class="fa fa-home"></i>&nbsp;<a href="<?php echo site_url('Home'); ?>">หน้าแรก</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
       <li class=""><a href="<?php echo site_url('Home/lesson_detail_list'); ?>">รายการเนื้อหา</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
       <li class="active">เนื้อหา</li>
     </ol>

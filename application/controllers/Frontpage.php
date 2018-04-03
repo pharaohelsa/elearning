@@ -70,6 +70,13 @@ class Frontpage extends CI_Controller {
 
         $i++;
       }
+    }else{
+      $j=0;
+      foreach ($getLessonDetailList as $key) {
+        $getLessonDetailList[$j]['checkPosttest'] = '';
+        $getLessonDetailList[$j]['checkPretest'] = '';
+        $j++;
+      }
     }
     $value = array(
       'Result' => array(

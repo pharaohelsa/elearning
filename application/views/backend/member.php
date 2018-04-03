@@ -7,8 +7,8 @@
                 จัดการสมาชิก</div>
         </div>
         <ol class="breadcrumb page-breadcrumb pull-right">
-            <li><i class="fa fa-home"></i>&nbsp;<a href="<?php echo site_url('Home'); ?>">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-            <li class="hidden"><a href="#">Member</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+            <li><i class="fa fa-home"></i>&nbsp;<a href="<?php echo site_url('Home'); ?>">หน้าแรก</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+            <li class="hidden"><a href="#">สมาชิก</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
             <li class="active">จัดการสมาชิก</li>
         </ol>
         <div class="clearfix">
@@ -35,9 +35,9 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Username</th>
-                            <th>Fullname</th>
-                            <th class="" width="20%">action</th>
+                            <th>ชื่อผู้ใช้</th>
+                            <th>รหัสผ่าน</th>
+                            <th class="" width="20%">จัดการ</th>
                         </tr>
                         </thead>
                         <tbody>

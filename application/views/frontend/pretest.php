@@ -8,6 +8,11 @@
         <div class="jumbotron" >
         <h2>แบบทดสอบ</h2>
         </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <button onclick="location.href='<?php echo site_url('Frontpage/'); ?>'" type="button" class="btn btn-green navbar-btn pull-right"><i class="fa fa-fast-backward" aria-hidden="true"></i>&nbsp;ฺกลับ</button>
+          </div>
+        </div>
         <?php
         $readonly="";
         if (empty($_SESSION['ADMIN_ID'])) {

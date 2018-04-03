@@ -7,7 +7,7 @@
       <div class="page-title">แบบทดสอบ</div>
     </div>
     <ol class="breadcrumb page-breadcrumb pull-right">
-      <li><i class="fa fa-home"></i>&nbsp;<a href="<?php echo site_url('Home'); ?>">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+      <li><i class="fa fa-home"></i>&nbsp;<a href="<?php echo site_url('Home'); ?>">หน้าแรก</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
       <li class=""><a href="<?php echo site_url('Home/lesson_list'); ?>">รายการแบบทดสอบ</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
       <li class="active">แบบทดสอบ</li>
     </ol>
