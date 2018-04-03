@@ -28,10 +28,25 @@
 
             <ul class="list-group list-group-flush">
               <?php foreach ($getLessonDetailList as $key): ?>
+
                 <li class="list-group-item">
-                  <?php echo 'บทที่ '.$key['tb_lesson_number'].' เรื่อง'.$key['tb_lesson_name'] ?>
-                  <span class="pull-right" style="padding-right:50px;" ><a class="btn btn-secondary <?=$readonly?>" href="<?php echo site_url('Frontpage/exam_pre/'.$key['tb_lesson_id']); ?>" role="button" style="margin-left:5em;">แบบทดสอบก่อนเรียน</a>
-                  <a class="btn btn-primary <?=$readonly?>" href="<?php echo site_url('Frontpage/exam_post/'.$key['tb_lesson_id']); ?>" role="button">แบบทดสอบหลังเรียน</a></span>
+                  <font size="5" style="margin-left:7%"><?php echo 'บทที่ '.$key['tb_lesson_number'].' เรื่อง'.$key['tb_lesson_name'] ?></font>
+                  <span class="pull-right" style="padding-right:50px;" >
+
+                    <?php if ($key['checkPretest']==0): ?>
+                      <a class="btn <?=$readonly?>" style="background-color: #ff6600;color:white" href="<?php echo site_url('Frontpage/exam_pre/'.$key['tb_lesson_id']); ?>" role="button" style="margin-left:5em;">แบบทดสอบก่อนเรียน</a>
+                    <?php else: ?>
+                      <!-- <a class="btn btn-danger" role="button" style="margin-left:5em;">แบบทดสอบก่อนเรียน(ทำแล้ว)</a> -->
+                    <?php endif; ?>
+
+
+
+                    <?php if ($key['checkPosttest']==0): ?>
+                      <a class="btn btn-primary <?=$readonly?>" href="<?php echo site_url('Frontpage/exam_post/'.$key['tb_lesson_id']); ?>" role="button">แบบทดสอบหลังเรียน</a></span>
+                    <?php else: ?>
+                      <!-- <a class="btn btn-danger" role="button">แบบทดสอบหลังเรียน(ทำแล้ว)</a></span> -->
+                    <?php endif; ?>
+
                 </li>
               <?php endforeach; ?>
               <!-- <li class="list-group-item">บทที่ 1 เรื่อง สมบัติของจำนวนนับ

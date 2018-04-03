@@ -20,10 +20,22 @@ class Culturalmodel extends CI_Model
 public function getLessonDetailList(){
   return
   $this->db
+  // ->select('tb_lesson_id,tb_lesson_number,tb_lesson_name,(select)')
   ->order_by('tb_lesson_number','asc')
   ->get('tb_lesson')
   ->result_array();
 }
+
+public function checkLesson($input){
+  return
+  $this->db
+  ->where('tb_lessonID',$input['tb_lessonID'])
+  ->where('tb_score_userID',$input['tb_score_userID'])
+  ->where('prepost',$input['prepost'])
+  ->get('tb_score')
+  ->result_array();
+}
+
 
 public function lessonInsert($input){
   $this->db->insert('tb_lesson_detail',$input);
@@ -133,6 +145,8 @@ public function lesson_lesson_detail($id){
 
   public function getScorelist(){ //correct answer
     return $this->db
+    // ->select('tb_score_ID,tb_lessonID,prepost,tb_score_total,tb_score_userID')
+    ->order_by('tb_score_total','desc')
     ->get('tb_score')
     ->result_array();
   }

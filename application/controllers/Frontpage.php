@@ -47,6 +47,30 @@ class Frontpage extends CI_Controller {
     //   $checklogin="success";
     // }
     $getLessonDetailList = $this->Culturalmodel->getLessonDetailList();
+    $i=0;
+    if(!empty($_SESSION['ADMIN_ID'])){
+      foreach ($getLessonDetailList as $key) {
+
+        $checkTest['tb_lessonID'] = $key['tb_lesson_id'];
+        $checkTest['tb_score_userID'] = $_SESSION['ADMIN_ID'];
+        $checkTest['prepost'] = 'แบบทดสอบก่อนเรียน';
+
+        if(count($this->Culturalmodel->checkLesson($checkTest))>0){
+          $getLessonDetailList[$i]['checkPretest'] = 1;
+        }else{
+          $getLessonDetailList[$i]['checkPretest'] = 0;
+        }
+
+        $checkTest['prepost'] = 'แบบทดสอบหลังเรียน';
+        if(count($this->Culturalmodel->checkLesson($checkTest))>0){
+          $getLessonDetailList[$i]['checkPosttest'] = 1;
+        }else{
+          $getLessonDetailList[$i]['checkPosttest'] = 0;
+        }
+
+        $i++;
+      }
+    }
     $value = array(
       'Result' => array(
       	'getLessonDetailList' => $getLessonDetailList
@@ -54,10 +78,6 @@ class Frontpage extends CI_Controller {
       'View' => 'frontend/pretest'
     );
     $this->LoadPage($value);
-    // $value = array(
-    //   'View' => 'frontend/pretest'
-    // );
-    // $this->LoadPage($value);
   }
 
   public function lesson(){

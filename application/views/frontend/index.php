@@ -1,7 +1,11 @@
 <main role="main">
-  <?php
-
-  ?>
+  <div class="container">
+    <div class="carousel-caption" style="padding-bottom:25% !important">
+      <h1 style="color:black;">บทเรียน Elearning วิชาคณิตศาสตร์</h1>
+      <p style="color:black;">ระดับชั้นมัธยมศึกษาปีที่ 1</p>
+      <!-- <p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com/docs/4.0/examples/carousel/#" role="button">Sign up today</a></p> -->
+    </div>
+  </div>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -13,13 +17,7 @@
       <!-- <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide"> -->
 
       <img class="first-slide" src="<?php echo base_url(); ?>assets/img/math1.gif" alt="E-learning">
-      <div class="container">
-        <div class="carousel-caption text-left">
-          <h1 style="color:black;">ระบบ Elearning วิชาคณิตศาสตร์</h1>
-          <p style="color:black;">ระดับชั้นมัธยมศึกษาปีที่ 1</p>
-          <!-- <p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com/docs/4.0/examples/carousel/#" role="button">Sign up today</a></p> -->
-        </div>
-      </div>
+
     </div>
     <!-- <div class="carousel-item">
     <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
